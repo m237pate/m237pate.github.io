@@ -8528,7 +8528,7 @@ textarea.form-control {
   margin-bottom: 0; }
 
 .block-3 .image {
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat; }
   @media (max-width: 767.98px) {
@@ -8794,4 +8794,10 @@ textarea.form-control {
 
 .cursor{
   cursor: pointer !important; 
+}
+
+.ftco-footer-Exp {
+  font-size: 16px;
+  background: #121212;
+  padding: inherit; 
 }
