@@ -1,0 +1,19 @@
+# GitHub Pages / Jekyll site config.
+# Enables clean URLs (no .html extensions) via front-matter permalinks +
+# automatic backward-compat redirects from the old .html URLs via the
+# jekyll-redirect-from plugin.
+
+title: Maharshi Patel
+description: Systems Engineer & Operations Builder. Mechatronics-trained — Apple, GM, Airbus/TUHH — now running e-commerce and retail operations.
+url: https://maharshipatel.me
+
+plugins:
+  - jekyll-redirect-from
+
+# Skip these from Jekyll processing & output. Everything else (Project/,
+# resume/, images/, css/, js/) is passed through to _site/ unchanged so
+# image and PDF links keep working.
+exclude:
+  - "MPatel Web Legacy.zip"
+  - stitch-export
+  - .DS_Store

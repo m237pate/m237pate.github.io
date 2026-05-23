@@ -1,3 +1,7 @@
+---
+permalink: /portfolio/
+redirect_from: /portfolio.html
+---
 <!DOCTYPE html>
 <html class="dark" lang="en">
 <head>
@@ -8,28 +12,28 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230A0A0A'/%3E%3Ctext x='8' y='12' font-family='monospace' font-size='10' fill='%2376d6d5' text-anchor='middle' font-weight='bold'%3EMP%3C/text%3E%3C/svg%3E">
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script src="js/stitch-config.js"></script>
+<script src="/js/stitch-config.js"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/stitch.css">
+<link rel="stylesheet" href="/css/stitch.css">
 </head>
 <body class="bg-background text-on-surface antialiased min-h-screen flex flex-col">
 
 <!-- ============= TOP NAV ============= -->
 <nav class="glass-nav fixed top-0 w-full z-50 border-b border-outline-variant/30">
   <div class="max-w-container-max mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base">
-    <a href="index.html" class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">MAHARSHI PATEL</a>
+    <a href="/" class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">MAHARSHI PATEL</a>
     <div class="hidden md:flex gap-8 items-center font-label-caps text-label-caps">
-      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="index.html">Home</a>
-      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="about.html">Experience</a>
-      <a class="text-tertiary font-bold border-b-2 border-tertiary pb-1" href="portfolio.html">Projects</a>
-      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="contact.html">Contact</a>
+      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="/">Home</a>
+      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="/about/">Experience</a>
+      <a class="text-tertiary font-bold border-b-2 border-tertiary pb-1" href="/portfolio/">Projects</a>
+      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="/contact/">Contact</a>
     </div>
-    <a href="resume/resume.pdf" target="_blank" class="hidden md:inline-block bg-secondary text-primary-container px-6 py-2 font-label-caps text-label-caps hover:bg-tertiary transition-colors duration-300">Download CV</a>
+    <a href="/resume/resume.pdf" target="_blank" class="hidden md:inline-block bg-secondary text-primary-container px-6 py-2 font-label-caps text-label-caps hover:bg-tertiary transition-colors duration-300">Download CV</a>
     <button data-mobile-nav-toggle class="md:hidden text-primary p-2" aria-label="Open menu">
       <span class="material-symbols-outlined">menu</span>
     </button>
@@ -40,11 +44,11 @@
   <button data-mobile-nav-close class="absolute top-6 right-6 text-on-surface" aria-label="Close menu">
     <span class="material-symbols-outlined" style="font-size:32px">close</span>
   </button>
-  <a href="index.html">Home</a>
-  <a href="about.html">Experience</a>
-  <a href="portfolio.html">Projects</a>
-  <a href="contact.html">Contact</a>
-  <a href="resume/resume.pdf" target="_blank" class="font-label-caps text-label-caps text-tertiary border border-tertiary px-6 py-3" style="font-size:14px">DOWNLOAD CV</a>
+  <a href="/">Home</a>
+  <a href="/about/">Experience</a>
+  <a href="/portfolio/">Projects</a>
+  <a href="/contact/">Contact</a>
+  <a href="/resume/resume.pdf" target="_blank" class="font-label-caps text-label-caps text-tertiary border border-tertiary px-6 py-3" style="font-size:14px">DOWNLOAD CV</a>
 </div>
 
 <main class="flex-grow pt-32 md:pt-48 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
@@ -70,9 +74,9 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" data-project-grid>
 
     <!-- 01 — Wind Harnessing -->
-    <a href="project-wind.html" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="research">
+    <a href="/project-wind/" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="research">
       <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
-        <img src="Project/Waterloo Research Project/FFF.2-8-10.jpg" alt="Wind Harnessing Technology" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+        <img src="/Project/Waterloo Research Project/FFF.2-8-10.jpg" alt="Wind Harnessing Technology" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
       </div>
       <div class="mb-4 flex justify-between items-start">
         <span class="font-label-caps text-label-caps text-tertiary px-2 py-1 bg-tertiary/10 border border-tertiary/20">PRJ-001 // RESEARCH</span>
@@ -89,9 +93,9 @@
     </a>
 
     <!-- 02 — Tensile Test -->
-    <a href="Project/ViewMore/ME559.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="research">
+    <a href="/Project/ViewMore/ME559.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="research">
       <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
-        <img src="Project/FEA/ME559_1.jpg" alt="Tensile Test Simulation" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+        <img src="/Project/FEA/ME559_1.jpg" alt="Tensile Test Simulation" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
       </div>
       <div class="mb-4 flex justify-between items-start">
         <span class="font-label-caps text-label-caps text-tertiary px-2 py-1 bg-tertiary/10 border border-tertiary/20">PRJ-002 // RESEARCH</span>
@@ -108,9 +112,9 @@
     </a>
 
     <!-- 03 — Composite Tensile -->
-    <a href="Project/ViewMore/533.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="research">
+    <a href="/Project/ViewMore/533.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="research">
       <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
-        <img src="Project/CompositeTest/533_1.jpg" alt="Composite Tensile Test" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+        <img src="/Project/CompositeTest/533_1.jpg" alt="Composite Tensile Test" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
       </div>
       <div class="mb-4 flex justify-between items-start">
         <span class="font-label-caps text-label-caps text-tertiary px-2 py-1 bg-tertiary/10 border border-tertiary/20">PRJ-003 // RESEARCH</span>
@@ -127,9 +131,9 @@
     </a>
 
     <!-- 04 — Topological Optimization -->
-    <a href="Project/ViewMore/TUHH.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="research">
+    <a href="/Project/ViewMore/TUHH.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="research">
       <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
-        <img src="Project/TUHH and Airbus/NEW_Results_EX5.jpg" alt="Topological Optimization" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+        <img src="/Project/TUHH and Airbus/NEW_Results_EX5.jpg" alt="Topological Optimization" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
       </div>
       <div class="mb-4 flex justify-between items-start">
         <span class="font-label-caps text-label-caps text-tertiary px-2 py-1 bg-tertiary/10 border border-tertiary/20">PRJ-004 // RESEARCH</span>
@@ -146,9 +150,9 @@
     </a>
 
     <!-- 05 — UWAFT Exhaust -->
-    <a href="Project/ViewMore/Exhaust.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="industry">
+    <a href="/Project/ViewMore/Exhaust.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="industry">
       <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
-        <img src="Project/UWAFT Exhaust/Exhaust5.JPG" alt="UWAFT Exhaust System" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+        <img src="/Project/UWAFT Exhaust/Exhaust5.JPG" alt="UWAFT Exhaust System" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
       </div>
       <div class="mb-4 flex justify-between items-start">
         <span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">PRJ-005 // INDUSTRY</span>
@@ -165,9 +169,9 @@
     </a>
 
     <!-- 06 — GM OPEX -->
-    <a href="Project/ViewMore/GM.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="industry">
+    <a href="/Project/ViewMore/GM.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="industry">
       <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
-        <img src="Project/GM/GM_lt4.jpg" alt="GM OPEX Improvement" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+        <img src="/Project/GM/GM_lt4.jpg" alt="GM OPEX Improvement" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
       </div>
       <div class="mb-4 flex justify-between items-start">
         <span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">PRJ-006 // INDUSTRY</span>
@@ -184,9 +188,9 @@
     </a>
 
     <!-- 07 — Linamar Rapid Prototyping -->
-    <a href="Project/ViewMore/Linamar.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="industry">
+    <a href="/Project/ViewMore/Linamar.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="industry">
       <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
-        <img src="Project/Linamar/Guage Design/18503.jpg" alt="Linamar Rapid Prototyping" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+        <img src="/Project/Linamar/Guage Design/18503.jpg" alt="Linamar Rapid Prototyping" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
       </div>
       <div class="mb-4 flex justify-between items-start">
         <span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">PRJ-007 // INDUSTRY</span>
@@ -203,9 +207,9 @@
     </a>
 
     <!-- 08 — Underwater ROV -->
-    <a href="Project/ViewMore/ROV.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="educational">
+    <a href="/Project/ViewMore/ROV.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="educational">
       <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
-        <img src="Project/ROV/front.jpg" alt="Underwater ROV" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+        <img src="/Project/ROV/front.jpg" alt="Underwater ROV" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
       </div>
       <div class="mb-4 flex justify-between items-start">
         <span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">PRJ-008 // EDUCATIONAL</span>
@@ -224,7 +228,7 @@
     <!-- 09 — VisionVest -->
     <a href="http://www.visionvest.me" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="educational">
       <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
-        <img src="Project/VisionVest/vision_vest.jpg" alt="VisionVest" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+        <img src="/Project/VisionVest/vision_vest.jpg" alt="VisionVest" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
       </div>
       <div class="mb-4 flex justify-between items-start">
         <span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">PRJ-009 // EDUCATIONAL</span>
@@ -241,9 +245,9 @@
     </a>
 
     <!-- 10 — Balsawood Bridge -->
-    <a href="Project/ViewMore/Bridge.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="educational">
+    <a href="/Project/ViewMore/Bridge.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="educational">
       <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
-        <img src="Project/BridgeProject/Bridge_Final_3D_Model.jpg" alt="Balsawood Bridge" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+        <img src="/Project/BridgeProject/Bridge_Final_3D_Model.jpg" alt="Balsawood Bridge" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
       </div>
       <div class="mb-4 flex justify-between items-start">
         <span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">PRJ-010 // EDUCATIONAL</span>
@@ -272,13 +276,13 @@
       © <script>document.write(new Date().getFullYear());</script> MAHARSHI PATEL // ENGINEERED WITH PRECISION
     </div>
     <div class="flex gap-6 font-body-md text-body-md text-secondary">
-      <a class="hover:text-tertiary transition-colors" href="contact.html">Contact</a>
+      <a class="hover:text-tertiary transition-colors" href="/contact/">Contact</a>
       <a class="hover:text-tertiary transition-colors" href="https://www.linkedin.com/in/maharshipatel27/" target="_blank">LinkedIn</a>
     </div>
   </div>
 </footer>
 
-<script src="js/stitch-nav.js"></script>
+<script src="/js/stitch-nav.js"></script>
 <script>
   // Portfolio category filter
   (function () {
