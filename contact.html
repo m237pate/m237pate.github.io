@@ -67,12 +67,17 @@
 
     <!-- Info panels -->
     <div class="md:col-span-4 flex flex-col gap-6">
-      <a href="mailto:1patelmah@gmail.com" class="block border border-outline-variant/50 p-6 relative group hover:bg-surface-container-highest transition-colors duration-300">
+      <div data-email-panel class="block border border-outline-variant/50 p-6 relative group hover:bg-surface-container-highest transition-colors duration-300"
+           data-em-local="1patelmah" data-em-domain="gmail.com">
         <div class="absolute top-0 left-0 w-full h-[2px] bg-transparent group-hover:bg-tertiary transition-colors duration-300"></div>
         <div class="font-label-caps text-label-caps text-tertiary mb-2 uppercase">Communication Protocol</div>
-        <div class="font-headline-md text-headline-md text-on-surface break-all">1patelmah@gmail.com</div>
+        <button data-email-reveal type="button" class="font-headline-md text-headline-md text-on-surface inline-flex items-center gap-2 hover:text-tertiary transition-colors">
+          <span class="material-symbols-outlined" style="font-size:18px">visibility</span>
+          Reveal Email
+        </button>
+        <a data-email-link class="font-headline-md text-headline-md text-on-surface hidden hover:text-tertiary transition-colors break-all"></a>
         <div class="font-body-md text-body-md text-on-surface-variant mt-1">Best for project intros &amp; long-form</div>
-      </a>
+      </div>
 
       <div data-phone-panel class="block border border-outline-variant/50 p-6 relative group hover:bg-surface-container-highest transition-colors duration-300"
            data-p1="989" data-p2="501" data-p3="4467">
@@ -108,22 +113,24 @@
     <div class="md:col-span-7 md:col-start-6 mt-12 md:mt-0">
       <!--
         FormSubmit endpoint:
-          By default this posts to https://formsubmit.co/1patelmah@gmail.com (your raw email is visible in HTML source).
+          The action attribute starts empty. JS reads data-fs-local + data-fs-domain
+          and assembles the full FormSubmit endpoint at page load, so the recipient
+          email never appears verbatim in static HTML source.
 
-          NOTE: This is the regular (non-AJAX) endpoint. FormSubmit's _autoresponse and reCAPTCHA only fire
-          on regular POST submissions — AJAX submissions silently skip both. That's why we use a standard
-          form POST + _next redirect instead of fetch().
+          This is a regular (non-AJAX) POST endpoint. FormSubmit's _autoresponse and
+          reCAPTCHA only fire on regular POST submissions — AJAX silently skips both.
 
-          To hide your email from scrapers, get a random alias token:
-            1. Visit  https://formsubmit.co
-            2. Enter 1patelmah@gmail.com → you'll receive an activation email
-            3. The activation email contains a token like 'abc123xyz'
-            4. Replace the action URL below with 'https://formsubmit.co/abc123xyz'
-          The token works identically — submissions still arrive in your Gmail.
+          To upgrade to a fully-anonymized hashed token (recommended later):
+            1. Visit  https://formsubmit.co  →  enter the recipient email
+            2. Click Create Form; check your inbox for an activation email
+               containing a token like 'abc123xyz'
+            3. Replace data-fs-local + data-fs-domain on the form with a single
+               data-fs-token attribute, and update the JS below to use it.
       -->
       <form
         data-contact-form
-        action="https://formsubmit.co/1patelmah@gmail.com"
+        data-fs-local="1patelmah"
+        data-fs-domain="gmail.com"
         method="POST"
         class="flex flex-col gap-10"
       >
@@ -174,42 +181,66 @@
       © <script>document.write(new Date().getFullYear());</script> MAHARSHI PATEL // ENGINEERED WITH PRECISION
     </div>
     <div class="flex gap-6 font-body-md text-body-md text-secondary">
-      <a class="hover:text-tertiary transition-colors" href="mailto:1patelmah@gmail.com">Email</a>
-      <a class="hover:text-tertiary transition-colors" href="https://www.linkedin.com/in/maharshipatel27/" target="_blank">LinkedIn</a>
       <a class="hover:text-tertiary transition-colors" href="contact.html">Contact</a>
+      <a class="hover:text-tertiary transition-colors" href="https://www.linkedin.com/in/maharshipatel27/" target="_blank">LinkedIn</a>
     </div>
   </div>
 </footer>
 
 <script src="js/stitch-nav.js"></script>
 <script>
-  // Reveal-on-click for the phone number. Digits are stored as three separate
-  // data attributes (data-p1/p2/p3) and assembled in JS after a click so the
-  // raw number never appears in the static HTML for naive scrapers to harvest.
+  // Reveal-on-click for phone & email. Sensitive data is split across
+  // data attributes (data-p1/p2/p3 for phone, data-em-local/data-em-domain
+  // for email) and assembled in JS only after a click — so the raw values
+  // never appear in the static HTML for naive scrapers to harvest.
   (function () {
-    var panel = document.querySelector('[data-phone-panel]');
-    var btn = document.querySelector('[data-phone-reveal]');
-    var link = document.querySelector('[data-phone-link]');
-    if (!panel || !btn || !link) return;
-    btn.addEventListener('click', function () {
-      var p1 = panel.dataset.p1, p2 = panel.dataset.p2, p3 = panel.dataset.p3;
-      link.href = 'tel:+1' + p1 + p2 + p3;
-      link.textContent = '+1 ' + p1 + '.' + p2 + '.' + p3;
-      btn.classList.add('hidden');
-      link.classList.remove('hidden');
-    });
+    var phonePanel = document.querySelector('[data-phone-panel]');
+    var phoneBtn = document.querySelector('[data-phone-reveal]');
+    var phoneLink = document.querySelector('[data-phone-link]');
+    if (phonePanel && phoneBtn && phoneLink) {
+      phoneBtn.addEventListener('click', function () {
+        var p1 = phonePanel.dataset.p1, p2 = phonePanel.dataset.p2, p3 = phonePanel.dataset.p3;
+        phoneLink.href = 'tel:+1' + p1 + p2 + p3;
+        phoneLink.textContent = '+1 ' + p1 + '.' + p2 + '.' + p3;
+        phoneBtn.classList.add('hidden');
+        phoneLink.classList.remove('hidden');
+      });
+    }
+
+    var emailPanel = document.querySelector('[data-email-panel]');
+    var emailBtn = document.querySelector('[data-email-reveal]');
+    var emailLink = document.querySelector('[data-email-link]');
+    if (emailPanel && emailBtn && emailLink) {
+      emailBtn.addEventListener('click', function () {
+        var addr = emailPanel.dataset.emLocal + '@' + emailPanel.dataset.emDomain;
+        emailLink.href = 'mailto:' + addr;
+        emailLink.textContent = addr;
+        emailBtn.classList.add('hidden');
+        emailLink.classList.remove('hidden');
+      });
+    }
   })();
 </script>
 <script>
-  // FormSubmit regular-POST integration. The form submits natively to FormSubmit,
-  // which validates reCAPTCHA, emails 1patelmah@gmail.com, fires the auto-reply
-  // to the visitor, and finally redirects them to /thank-you.html via the _next field.
+  // FormSubmit regular-POST integration.
+  //
+  //  1. Assemble the form's action URL from data-fs-local/data-fs-domain so the
+  //     recipient email is not present verbatim in the static HTML.
+  //  2. On submit: validate honeypot, set dynamic _subject, show "Transmitting…"
+  //     and let the browser do a native POST. FormSubmit runs reCAPTCHA, emails
+  //     the recipient, fires the auto-reply, and redirects to /thank-you.html
+  //     via the _next field.
   //
   // Why not AJAX? FormSubmit's docs note that _autoresponse and reCAPTCHA are skipped
   // on AJAX submissions — so a regular POST is the only way to get the auto-reply.
   (function () {
     var form = document.querySelector('[data-contact-form]');
     if (!form) return;
+
+    // Assemble the FormSubmit endpoint URL at page load
+    var recipient = form.dataset.fsLocal + '@' + form.dataset.fsDomain;
+    form.action = 'https://formsubmit.co/' + recipient;
+
     var status = form.querySelector('[data-form-status]');
     var btn = form.querySelector('[data-submit]');
     var btnLabel = form.querySelector('[data-submit-label]');

@@ -34,8 +34,8 @@
   </div>
 </nav>
 
-<main class="flex-grow flex items-center justify-center px-margin-mobile md:px-margin-desktop">
-  <div class="max-w-2xl text-center">
+<main class="flex-grow flex items-center justify-center px-margin-mobile md:px-margin-desktop py-section-gap">
+  <div class="max-w-2xl text-center w-full">
     <!-- Tertiary checkmark icon -->
     <div class="inline-flex items-center justify-center w-20 h-20 rounded-full border-2 border-tertiary mb-8" style="box-shadow: 0 0 30px rgba(118,214,213,0.25)">
       <span class="material-symbols-outlined text-tertiary" style="font-size:40px">check</span>
@@ -45,9 +45,54 @@
     <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-6 tracking-tighter">
       Transmission<br>received.
     </h1>
-    <p class="font-body-lg text-body-lg text-secondary mb-8 max-w-xl mx-auto">
+    <p class="font-body-lg text-body-lg text-secondary mb-12 max-w-xl mx-auto">
       Your message is in my Gmail. I'll reply within a couple of days. You'll also get an auto-confirmation in your inbox — check the spam folder if it's not there.
     </p>
+
+    <!-- ============= CONTACT INFO (assembled by JS; obfuscated in HTML) =============
+         Email + phone are kept out of the static HTML on this page too. JS reads
+         the obfuscated attributes below and only renders the cards if the visitor
+         arrived from the FormSubmit redirect, so a bot landing directly on
+         /thank-you.html sees nothing useful.
+    -->
+    <div data-unlocked-panel
+         data-em-local="1patelmah" data-em-domain="gmail.com"
+         data-p1="989" data-p2="501" data-p3="4467"
+         class="border carbon-border p-8 mb-12 text-left hidden" style="border-color:rgba(118,214,213,0.3)">
+      <div class="flex items-center gap-2 mb-6">
+        <span class="material-symbols-outlined text-tertiary" style="font-size:18px">lock_open</span>
+        <span class="font-label-caps text-label-caps text-tertiary">// DIRECT CHANNELS UNLOCKED</span>
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+        Save these for follow-ups or to reach me directly:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a data-unlocked-email class="block border border-outline-variant/40 p-4 hover:border-tertiary transition-colors group">
+          <div class="font-label-caps text-label-caps text-tertiary mb-1 uppercase">Email</div>
+          <div data-unlocked-email-text class="font-body-lg text-body-lg text-on-surface group-hover:text-tertiary transition-colors break-all"></div>
+        </a>
+        <a data-unlocked-phone class="block border border-outline-variant/40 p-4 hover:border-tertiary transition-colors group">
+          <div class="font-label-caps text-label-caps text-tertiary mb-1 uppercase">Phone</div>
+          <div data-unlocked-phone-text class="font-body-lg text-body-lg text-on-surface group-hover:text-tertiary transition-colors"></div>
+        </a>
+        <a href="https://www.linkedin.com/in/maharshipatel27/" target="_blank" class="block border border-outline-variant/40 p-4 hover:border-tertiary transition-colors group md:col-span-2">
+          <div class="font-label-caps text-label-caps text-tertiary mb-1 uppercase">LinkedIn</div>
+          <div class="font-body-lg text-body-lg text-on-surface group-hover:text-tertiary transition-colors inline-flex items-center gap-2">
+            /in/maharshipatel27
+            <span class="material-symbols-outlined" style="font-size:18px">arrow_outward</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Shown if a visitor landed here without submitting the form -->
+    <div data-unlocked-fallback class="border carbon-border p-8 mb-12 text-center hidden">
+      <p class="font-body-md text-body-md text-on-surface-variant">
+        Looking for direct contact info?
+        <a href="contact.html" class="text-tertiary hover:underline">Send me a message via the contact form</a>
+        — once you submit, my email and phone unlock here for follow-ups.
+      </p>
+    </div>
 
     <div class="flex flex-wrap gap-4 justify-center">
       <a href="index.html" class="bg-secondary text-primary-container px-8 py-3 font-label-caps text-label-caps hover:bg-tertiary transition-colors duration-300">
@@ -60,6 +105,42 @@
   </div>
 </main>
 
+<script>
+  // Reveal direct channels only when the visitor arrived from a real form submit.
+  // FormSubmit redirects the visitor here after the POST, so document.referrer
+  // will include "formsubmit.co". If someone hits this URL directly (or via a
+  // bot crawl), we show the fallback "submit the form first" message instead.
+  (function () {
+    var panel = document.querySelector('[data-unlocked-panel]');
+    var fallback = document.querySelector('[data-unlocked-fallback]');
+    if (!panel || !fallback) return;
+
+    var referrer = (document.referrer || '').toLowerCase();
+    var fromForm = referrer.indexOf('formsubmit.co') !== -1;
+
+    if (fromForm) {
+      // Assemble email + phone from obfuscated data attrs
+      var addr = panel.dataset.emLocal + '@' + panel.dataset.emDomain;
+      var digits = panel.dataset.p1 + panel.dataset.p2 + panel.dataset.p3;
+      var phoneFmt = '+1 ' + panel.dataset.p1 + '.' + panel.dataset.p2 + '.' + panel.dataset.p3;
+
+      var emailA = panel.querySelector('[data-unlocked-email]');
+      var emailText = panel.querySelector('[data-unlocked-email-text]');
+      var phoneA = panel.querySelector('[data-unlocked-phone]');
+      var phoneText = panel.querySelector('[data-unlocked-phone-text]');
+
+      emailA.href = 'mailto:' + addr;
+      emailText.textContent = addr;
+      phoneA.href = 'tel:+1' + digits;
+      phoneText.textContent = phoneFmt;
+
+      panel.classList.remove('hidden');
+    } else {
+      fallback.classList.remove('hidden');
+    }
+  })();
+</script>
+
 <!-- ============= FOOTER ============= -->
 <footer class="bg-surface-container-lowest w-full py-16 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/30">
   <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-base">
@@ -67,9 +148,8 @@
       © <script>document.write(new Date().getFullYear());</script> MAHARSHI PATEL // ENGINEERED WITH PRECISION
     </div>
     <div class="flex gap-6 font-body-md text-body-md text-secondary">
-      <a class="hover:text-tertiary transition-colors" href="mailto:1patelmah@gmail.com">Email</a>
-      <a class="hover:text-tertiary transition-colors" href="https://www.linkedin.com/in/maharshipatel27/" target="_blank">LinkedIn</a>
       <a class="hover:text-tertiary transition-colors" href="contact.html">Contact</a>
+      <a class="hover:text-tertiary transition-colors" href="https://www.linkedin.com/in/maharshipatel27/" target="_blank">LinkedIn</a>
     </div>
   </div>
 </footer>
