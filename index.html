@@ -1,552 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Maharshi M Patel</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maharshi Patel | Mechanical Designer &amp; Systems Engineer</title>
+<meta name="description" content="Mechatronics-trained engineer building high-performance mechanical, retail, and systems solutions. Portfolio of CAD, FEA, and CFD work across aerospace, automotive, and consumer hardware.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230A0A0A'/%3E%3Ctext x='8' y='12' font-family='monospace' font-size='10' fill='%2376d6d5' text-anchor='middle' font-weight='bold'%3EMP%3C/text%3E%3C/svg%3E">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="js/stitch-config.js"></script>
 
-    <link rel="stylesheet" href="css/aos.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+<link rel="stylesheet" href="css/stitch.css">
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+<!-- ============= TOP NAV ============= -->
+<nav class="glass-nav fixed top-0 w-full z-50 border-b border-outline-variant/30">
+  <div class="max-w-container-max mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base">
+    <a href="index.html" class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">MAHARSHI PATEL</a>
+    <div class="hidden md:flex gap-8 items-center font-label-caps text-label-caps">
+      <a class="text-tertiary font-bold border-b-2 border-tertiary pb-1" href="index.html">Home</a>
+      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="about.html">Experience</a>
+      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="portfolio.html">Projects</a>
+      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="contact.html">Contact</a>
+    </div>
+    <a href="resume/resume.pdf" target="_blank" class="hidden md:inline-block bg-secondary text-primary-container px-6 py-2 font-label-caps text-label-caps hover:bg-tertiary transition-colors duration-300">Download CV</a>
+    <button data-mobile-nav-toggle class="md:hidden text-primary p-2" aria-label="Open menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</nav>
 
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+<!-- ============= MOBILE DRAWER ============= -->
+<div data-mobile-drawer class="mobile-drawer">
+  <button data-mobile-nav-close class="absolute top-6 right-6 text-on-surface" aria-label="Close menu">
+    <span class="material-symbols-outlined" style="font-size:32px">close</span>
+  </button>
+  <a href="index.html">Home</a>
+  <a href="about.html">Experience</a>
+  <a href="portfolio.html">Projects</a>
+  <a href="contact.html">Contact</a>
+  <a href="resume/resume.pdf" target="_blank" class="font-label-caps text-label-caps text-tertiary border border-tertiary px-6 py-3" style="font-size:14px">DOWNLOAD CV</a>
+</div>
 
+<main class="flex-grow pt-32 md:pt-48 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+
+  <!-- ============= HERO ============= -->
+  <section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap items-center" id="about">
+    <div class="md:col-span-7 flex flex-col gap-6">
+      <span class="font-label-caps text-label-caps text-tertiary">// HELLO &amp; BONJOUR</span>
+      <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface tracking-tighter">
+        Mechanical Designer<br>&amp; Systems Engineer
+      </h1>
+      <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+        Mechatronics-trained engineer from Canada. I build high-performance mechanical, retail, and systems solutions — CAD/FEA/CFD work for aerospace and automotive, and the IT &amp; operations stack behind two e-commerce ventures.
+      </p>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Apple. General Motors. Airbus / TUHH. Linamar. University of Waterloo. Now leading Rakam (E-comm Retail) at Kirana LLC.
+      </p>
+      <div class="flex flex-wrap gap-4 mt-4">
+        <a href="portfolio.html" class="bg-secondary text-primary-container px-8 py-3 font-label-caps text-label-caps hover:bg-tertiary transition-colors duration-300">
+          View Projects
+        </a>
+        <a href="contact.html" class="bg-transparent border carbon-border text-tertiary px-8 py-3 font-label-caps text-label-caps hover:bg-surface-container-highest transition-colors duration-300">
+          Contact Me
+        </a>
       </div>
     </div>
-    <div class="page">
-    <nav id="colorlib-main-nav" role="navigation">
-      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-      <div class="js-fullheight colorlib-table">
-        <!-- <div class="img" style="background-image: url(images/author-2.jpg);"></div> -->
-        <div class="colorlib-table-cell js-fullheight">
-          <div class="row no-gutters">
-            <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Maharshi Patel</a></h1>
-              <ul>
-                <!-- <li class="active"><a href="index.html"><span>Home</span></a></li> -->
-                <!-- <li><a href="about.html"><span>Resume</span></a></li> -->
-                <!-- <li><a href="services.html"><span><small>03</small>Services</span></a></li> -->
-                <!-- <li><a href="portfolio.html"><span>Portfolio</span></a></li> -->
-                <!-- <li><a href="blog.html"><span><small>05</small>Blog</span></a></li> -->
-                <!-- <li><a href="contact.html"><span><small>06</small>Contact</span></a></li> -->
-              </ul>
-            </div>
-          </div>
-        </div>
+    <div class="md:col-span-5 md:col-start-8 mt-12 md:mt-0 relative">
+      <div class="aspect-[1.38] rounded-xl overflow-hidden carbon-border relative z-10">
+        <img alt="Maharshi Patel" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500" src="images/e5_bridge.jpg">
       </div>
-    </nav>
-    
-    <div id="colorlib-page">
-      <header>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="colorlib-navbar-brand">
-                <!-- <a class="colorlib-logo" href="index.html"><span class="logo-img" style="background-image: url(images/e5_bridge.jpg);"></span>Maharshi Patel</a> -->
-              </div>
-              <!-- <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a> -->
-            </div>
-          </div>
-        </div>
-      </header>
-
-<!-- heading / title -->
-      <section class="home-slider owl-carousel js-fullheight">
-        <div class="slider-item js-fullheight">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text align-items-center text-center justify-content-center" data-scrollax-parent="true">
-              <div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <p><a href="#" class="scroll">Hello &amp; Bonjour, I'm</a></p>
-                <h1 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Maharshi Patel</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-item js-fullheight">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text align-items-center text-center justify-content-center" data-scrollax-parent="true">
-              <div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <p><a href="#" class="scroll">I'm from Canada</a></p>
-                <h1 class="mb-3" data-scrollax="properties: {translateY: '30%', opacity: 1.6}">An Enthusiastic Mechanical Designer</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- END slider -->
-
-<!-- about my self -->
-      <section class="ftco-footer-Exp ftco-bg-dark ftco-section">
-        <div class="container">
-          <div class="row d-flex" data-scrollax-parent="true">
-            <div class="col-md-4 author-img" style="background-image: url(images/e5_bridge.jpg);" data-scrollax=" properties: { translateY: '-70%'}"></div>
-            <div class="col-md-2"></div>
-            <div class="col-md-6 wrap ftco-animate">
-              <div class="about-desc">
-                <h1 class="bold-text depth">About</h1>
-                <div class="p-5">
-                  <h4 class="mb-4">Versatile professional with expertise in integrating systems, improving operational processes, and deploying IT solutions to enhance business efficiency. Adept at setting up e-commerce platforms, automating inventory control, and optimizing customer management. Strong experience in fostering client and vendor relationships, along with crafting and executing go-to-market strategies to support business expansion and streamline operations. Skilled in delivering tailored technical support and solutions for small and growing businesses</h4>
-                  <p>I am passionate about retail and e-comm design, and want my work to best reflect my personality. My ideal role is, working in a company where I can make the life of my end user easier. <br />
-
-                 <!-- <h4 class="mb-4">I'm a young and charming Mechatronics Engineer from Canada, focusing on Mechanical design. I aim to make a difference through my creative solution, one design at a time.</h4>
-                  <p>I am passionate about mechanical and automotive design, and want my work to best reflect my personality. My ideal role is, working in a company where I can make the life of my end user easier. <br /> -->
-
-                  In addition, I have a keen interest in Formula 1, Football (Soccer), Cricket, Basketball, and Tennis. Also, in my free time I watch lots and lots of movies and go on late night city drives. My next item in the bucket list is to get my motorcycle license.</p>
-                  <p><a href="http://www.maharshipatel.me/resume/resume.pdf" target="_blank">My Resume</a></p>
-                  <ul class="ftco-footer-social list-unstyled mt-4"><!-- 
-                    <li><a href="#"><span class="icon-facebook"></span></a></li> -->
-                    <li class="cursor"><a href="https://www.linkedin.com/in/maharshipatel27/" target="_blank"><span class="icon-linkedin"></span></a></li>
-                   <!-- <li class="cursor"><a href="https://www.instagram.com/maharshi.m.patel/" target="_blank"><span class="icon-instagram"></span></a></li> -->
-                  </ul>
-                  <h5>Contact me here!</h5>
-                  <p > e-mail: <a href="mailto:1patelmah@gmail.com"> 1patelmah@gmail.com </a>
-                  </p>
-                  <p >Phone: <a href="tel:989-501-4467"> +1 989.501.4467</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<!-- Work experience -->
-            <!-- <section class="ftco-section about-section"> -->
-        <div class="container">
-          <div class="row d-flex my-5" data-scrollax-parent="true">
-          <div class="row d-flex justify-content-end mt-5">
-            <div class="col-md-10">
-              <div class="exp mt-5 ftco-animate">
-                <h2 class="mb-4">Relavent Experience</h2>
-
-                <div class="exp-wrap py-4">
-                  <div class="desc">
-                    <h4>Rakam - E-comm Retail <span> - Kirana LLC</span> </h4>
-                    <p class="location"> USA & Canada</p>
-                  </div>
-                  <div class="year">
-                    <p>2025 - Current</p>
-                  </div>
-                </div>
-
-                <div class="exp-wrap py-4">
-                  <div class="desc">
-                    <h4>Stealth Start Up - Food/Bevrage<span> - Jiba and Sons LLC</span> </h4>
-                    <p class="location"> London Canada</p>
-                  </div>
-                  <div class="year">
-                    <p>2021 - 2024</p>
-                  </div>
-                </div>
-
-                <div class="exp-wrap py-4">
-                  <div class="desc">
-                    <h4>Mechanical Design Engineer <span> - Autoscale CNC</span> </h4>
-                    <p class="location">USA - Concord</p>
-                  </div>
-                  <div class="year">
-                    <p>2020 - 2021</p>
-                  </div>
-                </div>
-                
-                <div class="exp-wrap py-4">
-                  <div class="desc">
-                    <h4>Mechanical Design Engineer <span> - Kai Concepts LLC</span> </h4>
-                    <p class="location">USA - Alameda</p>
-                  </div>
-                  <div class="year">
-                    <p>2019 - 2020</p>
-                  </div>
-                </div>
-
-                <div class="exp-wrap py-4">
-                  <div class="desc">
-                    <h4>Mechanical Engineering Intern (iPhone) <span> - Apple Inc.</span> </h4>
-                    <p class="location">USA - Cupertino</p>
-                  </div>
-                  <div class="year">
-                    <p>2018</p>
-                  </div>
-                </div>
-
-                <div class="exp-wrap py-4">
-                  <div class="desc">
-                    <h4>Mechanical Research Intern <span> - TUHH &amp; Airbus</span> </h4>
-                    <p class="location">Germany - Hamburg</p>
-                  </div>
-                  <div class="year">
-                    <p>2017</p>
-                  </div>
-                </div>
-
-                <div class="exp-wrap py-4">
-                  <div class="desc">
-                    <h4>Mechanical Engineering Intern <span> - General Motors</span> </h4>
-                    <p class="location">Canada - St. Catherines</p>
-                  </div>
-                  <div class="year">
-                    <p>2016</p>
-                  </div>
-                </div>
-
-                <div class="exp-wrap py-4">
-                  <div class="desc">
-                    <h4>Jr. Project Engineering Intern (Machining) <span> - Linamar</span> </h4>
-                    <p class="location">Canada - Guelph</p>
-                  </div>
-                  <div class="year">
-                    <p>2016</p>
-                  </div>
-                </div>
-    
-                <div class="exp-wrap py-4">
-                  <div class="desc">
-                    <h4>Mechanical Research Intern <span> - University of Waterloo</span> </h4>
-                    <p class="location">Canada - Waterloo</p>
-                  </div>
-                  <div class="year">
-                    <p>2015</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="exp mt-5 ftco-animate">
-                <h2 class="mb-4">Education</h2>
-                <div class="exp-wrap py-4">
-                  <div class="desc">
-                    <h4>BASc. Honours Mechatronics Engineering</h4>
-                    <p class="location"> University of Waterloo (Canada) - Class of 2019 </p>
-                  </div>
-                  <div class="year">
-                    <p>April 2019</p>
-                  </div>
-                </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-<!-- summary of skills -->
-      <section class="ftco-section">
-        <div class="container mt-5">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <h2>Summary of Skills. . .</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services p-3 py-4 d-block text-center">
-                <div class="icon mb-3"><span class="icon-layers"></span></div>
-                <div class="media-body">
-                  <h3 class="heading">SolidWorks</h3>
-                  <h3 class="heading">NX 10</h3>
-                  <h3 class="heading">AutoDesk CAD/Inventor</h3>
-                  <h3 class="heading">ANSYS</h3>
-                  <h3 class="heading">Abaqus</h3>
-                  <h3 class="heading">Simulink</h3>
-                  <h3 class="heading">LabVIEW</h3>
-                </div>
-              </div>      
-            </div>
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services p-3 py-4 d-block text-center">
-                <div class="icon mb-3"><span class="icon-gears"></span></div>
-                <div class="media-body">
-                  <h3 class="heading">Machine Design</h3>
-                  <h3 class="heading">Design for Manufacturing</h3>
-                  <h3 class="heading">Design for Assembly</h3>
-                  <h3 class="heading">DFMEA/PFMEA</h3>
-                  <h3 class="heading">Sensors and Instrumentation</h3> 
-                </div>
-              </div>      
-            </div>
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services p-3 py-4 d-block text-center">
-                <div class="icon mb-3"><span class="icon-code"></span></div>
-                <div class="media-body">
-                  <h3 class="heading">Matlab</h3>
-                  <h3 class="heading">Maple</h3>
-                  <h3 class="heading">Python</h3>
-                  <h3 class="heading">JMP</h3>
-                </div>
-              </div>    
-            </div>
-          </div>
-        </div>
-      </section>
-
-<!-- Portfolio -->
-      <section class="ftco-section">
-        <div class="container">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <span>Portfolio</span>
-              <h2>My Previous Projects</h2>
-            </div>
-          </div>
-
-
-<!-- Research -->
-          <div>
-                <h2>Research &amp; Development</h2>
-          </div>
-
-          <div class="row no-gutters">
-            <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a class="image d-flex justify-content-center align-items-center" style="background-image: url('Project/Waterloo Research Project/FFF.2-8-10.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-            </a>
-              <div class="text">
-                <h4 class="subheading">University of Waterloo</h4>
-                <h2 class="heading"><a>Wind Harnessing Technology for Automotive Application</a></h2>
-                <p>Developed a brand new concept of harvesting wind energy by replacing the radiator fan to a small scale high speed wind turbine.</p>
-                <p><a href="http://www.maharshipatel.me/Project/ViewMore/FINAL_Airfoil.pdf" target="_blank">View Project</a></p>
-              </div>
-            </div>
-
-            <div class="row no-gutters">
-            <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('Project/FEA/ME559_1.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-            </a>
-              <div class="text">
-                <h4 class="subheading">University of Waterloo</h4>
-                <h2 class="heading"><a>Tensile Test Simulation</a></h2>
-                <p>After, the invention of CAD and CAE tools drafting and analysing complex designs has been made cheap. However, understanding the limitation of FEA tools is critical to design these parts. In addition, validation and calibration of the model is necessary! In this paper, all of these concepts have been dicussed to a greater extent.</p>
-                <p><a href="http://www.maharshipatel.me/Project/ViewMore/ME559.pdf" target="_blank">View Project</a></p>
-              </div>
-            </div>
-
-            <div class="row no-gutters">
-            <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a class="image d-flex justify-content-center align-items-center" style="background-image: url('Project/CompositeTest/533_1.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-            </a>
-              <div class="text">
-                <h4 class="subheading">University of Waterloo</h4>
-                <h2 class="heading"><a>Tensile Strength of Composite</a></h2>
-                <p>Composite materials have unpredictable properties and there are no robust simulation tools present to examine this. Hence, a lot of DoE's are conducted in order to find the experimental stress (&sigma;) - strain (&epsilon;) relationship. Similar approach was taken to find the tensile strength and strain of a composite material made of household materials. The fiber used was &frac18; hardwood dowel, and hot glue as matrix. </p> </p>
-                <p><a href="http://www.maharshipatel.me/Project/ViewMore/533.pdf" target="_blank">View Project</a></p>
-              </div>
-            </div>
-
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('Project/TUHH and Airbus/To-Op.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-            </a>
-            <div class="text order-1">
-              <h4 class="subheading">TUHH and Airbus</h4>
-              <h2 class="heading"><a> Topological Optimization of Hybrid Airframe Structures</a></h2>
-              <p>In Topological Optimization, the results you obtain are in the form of density fields. These are called "bionic" structures. Also note that, bionic shapes are hard to map into a geometrically constrained structure. During my time here, my task was to take bionic shapes and map them to geometrically constrained structures. This was done by using NURBS curves and density gradients.</p>
-              <p><a href="http://www.maharshipatel.me/Project/ViewMore/TUHH.pdf" target="_blank">View Project</a></p>
-            </div>
-          </div>
-
-<!-- work projects -->
-          <div>
-                <h2>Industry Design</h2>
-          </div>
-
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a class="image d-flex justify-content-center align-items-center" style="background-image: url('Project/UWAFT Exhaust/Exhaust5.JPG'); " data-scrollax=" properties: { translateY: '-30%'}">
-            </a>
-            <div class="text">
-              <h4 class="subheading">UWAFT</h4>
-              <h2 class="heading"><a>Exhaust System Design</a></h2>
-              <p>As the first year of the EcoCAR 4 (Cheverolet Blazer) competition, it was critical to design the exhaust system as soon as possible. For the reason that, this sub system was the bottle neck for the last competition year. Hence, after breadth and depth research on the workings of a exhaust system, a final design was proposed. </p>
-              <p><a href="http://www.maharshipatel.me/Project/ViewMore/Exhaust.pdf" target="_blank">View Project</a></p>
-            </div>
-          </div>
-
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('Project/GM/GM_lt4.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-            </a>
-            <div class="text">
-              <h4 class="subheading">General Motors</h4>
-              <h2 class="heading"><a>OPEX Improvement Projects</a></h2>
-              <p>General Motors have a rich history in making automobiles. Their process is state of the art when it comes to manufacturing high performance and/or luxury vehicles. During my time here, I was tasked to improve first time quality rate of the GenV engines (V8 Engines). The two bottle neck operations were the unload and cold test station. Hence, I led an engineering team of 7 people to undertake this project and improved the first time quality by 5%. </p>
-              <p><a href="http://www.maharshipatel.me/Project/ViewMore/GM.pdf" target="_blank">View Project</a></p>
-            </div>
-          </div>
-
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a class="image d-flex justify-content-center align-items-center" style="background-image: url('Project/Linamar/Guage Design/18503.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-            </a>
-            <div class="text order-1">
-              <h4 class="subheading">Linamar</h4>
-              <h2 class="heading"><a>Rapid Prototyping</a></h2>
-              <p>In the world of manufacturing, not only one has to build parts that are to user specifiaction, as well as, build them in high volume. During my time here, our facility was switching from low volume to a high volume factory. My tasks were to aid in rapid prototyping of Ford &amp; GM transmisions. As well as designing measuring tools and fixtures to measure the quality of your product, such as various thread, Go/NoGo, bore and depth gauges for the parts manufactured.</p>
-              <p><a href="http://www.maharshipatel.me/Project/ViewMore/Linamar.pdf" target="_blank">View Project</a></p>
-            </div>
-          </div>
-
-
-<!-- school projects -->
-          <div>
-                <h2>Educational Design</h2>
-          </div>
-
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a class="image d-flex justify-content-center align-items-center" style="background-image: url('Project/ROV/front.jpg'); "  data-scrollax=" properties: { translateY: '-30%'}">
-            </a>
-            <div class="text order-1">
-              <h4 class="subheading">University of Waterloo</h4>
-              <h2 class="heading"><a>Underwater Remotely Operated Vehicle (ROV)</a></h2>
-              <p>Designed an Underwater ROV mechanical structure that would give the most aerodynamic performance. The inspiration came from designing the ROV in the form of a water droplet, which is one of the most aerodynamic shape in order to cut through the fluid in the efficient way. </p>
-              <p><a href="http://www.maharshipatel.me/Project/ViewMore/ROV.pdf" target="_blank">View Project</a></p>
-            </div>
-          </div>
-
-            <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('Project/VisionVest/vision_vest.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-            </a>
-            <div class="text order-1">
-              <h4 class="subheading">VisionVest (UWaterloo)</h4>
-              <h2 class="heading"><a>Tactile Feedback vest for the Visually Imparied</a></h2>
-              <p>Currently, visually impaired people understand their surroundings through the use of a walking stick, a guide dog, or another active form of inputs, which limits them to active or indirect forms of environmental input. VisionVest aims to create a passive and direct way for visually impaired people to avoid immediate obstacles. By leveraging sensory substitution, a tactile vest with vibration motors is used to give the user feedback on their surrounding to assist them with avoiding obstacles. </p>
-              <p><a href="http://www.visionvest.me" target="_blank">View Project</a></p>
-              <p><a href="http://www.maharshipatel.me/Project/VisionVest/visionvest_poster.pdf" target="_blank">Project Poster</a></p>
-            </div>
-          </div>
-
-            <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a class="image d-flex justify-content-center align-items-center" style="background-image: url('Project/BridgeProject/Bridge_Final_3D_Model.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-            </a>
-            <div class="text">
-              <h4 class="subheading">University of Waterloo</h4>
-              <h2 class="heading"><a>Balsawood Bridge</a></h2>
-              <p>To understand key concepts of numerical methods and it's limitations, a bridge was designed and built from Balsawood that was optimized for weight to strength ratio. After the design iterations, several stress analysis simulations were conducted using <b>ANSYS AIM</b>. The model was calibrated and validated by placing actual weight on the bridge until failure.</p>
-              <p><a href="http://www.maharshipatel.me/Project/ViewMore/Bridge.pdf" target="_blank">View Project</a></p>
-            </div>
-          </div>
-
-<!-- perosnal projects -->
-          <div>
-                <h2>Personal Design</h2>
-          </div>
-
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('Project/Car Stand/IMG_4071.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-            </a>
-            <div class="text">
-              <h4 class="subheading">Gaming</h4>
-              <h2 class="heading"><a>Racing Simulator</a></h2>
-              <p>As a car enthusiast I wanted to play racing games that were running on good physics engines. However, playing with the joystick was not fun as the pad and other peripherals were too sensitive. Hence, I bought a steering wheel set Logitech G920! But, the problem was that there was no good ride height table and chair at home to attach the simulator to, and the off market solution were too expensive. This led to the idea to manufacture an ergonomic yet cheap design of the racing simulator.</p>
-              <p><a href="#">Coming Soon. . .</a></p>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-      </section>
-
-<!--       <section class="ftco-section ftco-counter" id="section-counter">
-        <div class="container">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <span>Portfolio</span>
-              <h2>I love to share my achievements</h2>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-start">
-            <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Clients</span>
-                  <strong class="number" data-number="420">0</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Project done</span>
-                  <strong class="number" data-number="890">0</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-end">
-            <div class="col-md-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Cups of coffee</span>
-                  <strong class="number" data-number="1000">0</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      
- <!--      <footer class="ftco-footer ftco-bg-dark ftco-section">
-        <div class="container">
-          <div class="row mb-5 justify-content-center">
-            <div class="col-md-5 text-center">
-              <div class="ftco-footer-widget mb-5">
-                <ul class="ftco-footer-social list-unstyled">
-                  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
-              </div>
-              <div class="ftco-footer-widget">
-                <h2 class="mb-3">Contact Us</h2>
-                <p class="h3 email"><a href="#">info@email.com</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-center">
-            </div>
-          </div>
-        </div>
-      </footer> -->
-
-      <!-- loader -->
-      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-      </div>
-
+      <div class="absolute inset-0 bg-tertiary/10 blur-[50px] -z-10 rounded-full translate-y-8 translate-x-8"></div>
     </div>
+  </section>
 
+  <!-- ============= TECHNICAL ARSENAL ============= -->
+  <section class="mb-section-gap" id="skills">
+    <div class="border-b carbon-border pb-4 mb-8">
+      <h2 class="font-label-caps text-label-caps text-tertiary">01 // TECHNICAL ARSENAL</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+      <div class="p-8 tech-card rounded-lg flex flex-col gap-4 bg-surface-container-lowest">
+        <div class="flex items-center gap-3 text-on-surface">
+          <span class="material-symbols-outlined text-tertiary">architecture</span>
+          <h3 class="font-headline-md text-headline-md">CAD / FEA</h3>
+        </div>
+        <ul class="font-body-md text-body-md text-secondary space-y-3 mt-4">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> SolidWorks</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> NX 10</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> AutoCAD / Inventor</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> ANSYS Workbench</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> Abaqus</li>
+        </ul>
+      </div>
+      <div class="p-8 tech-card rounded-lg flex flex-col gap-4 md:mt-8 bg-surface-container-lowest">
+        <div class="flex items-center gap-3 text-on-surface">
+          <span class="material-symbols-outlined text-tertiary">precision_manufacturing</span>
+          <h3 class="font-headline-md text-headline-md">Engineering</h3>
+        </div>
+        <ul class="font-body-md text-body-md text-secondary space-y-3 mt-4">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> Machine Design</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> Design for Manufacturing</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> Design for Assembly</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> DFMEA / PFMEA</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> Sensors &amp; Instrumentation</li>
+        </ul>
+      </div>
+      <div class="p-8 tech-card rounded-lg flex flex-col gap-4 md:mt-16 bg-surface-container-lowest">
+        <div class="flex items-center gap-3 text-on-surface">
+          <span class="material-symbols-outlined text-tertiary">terminal</span>
+          <h3 class="font-headline-md text-headline-md">Programming</h3>
+        </div>
+        <ul class="font-body-md text-body-md text-secondary space-y-3 mt-4">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> MATLAB</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> Maple</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> Python</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> JMP</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">add</span> Simulink / LabVIEW</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
+  <!-- ============= FEATURED PROJECTS ============= -->
+  <section class="mb-section-gap" id="projects">
+    <div class="border-b carbon-border pb-4 mb-8 flex justify-between items-end">
+      <h2 class="font-label-caps text-label-caps text-tertiary">02 // FEATURED PROJECTS</h2>
+      <a href="portfolio.html" class="font-label-caps text-label-caps text-secondary hover:text-tertiary transition-colors">VIEW ALL →</a>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+      <!-- Wind Harnessing (big card) -->
+      <a href="project-wind.html" class="tech-card rounded-lg overflow-hidden flex flex-col group bg-surface-container-lowest">
+        <div class="h-64 bg-surface-container-highest relative overflow-hidden">
+          <img alt="Wind Harnessing Technology" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105" src="Project/Waterloo Research Project/FFF.2-8-10.jpg">
+          <div class="absolute top-4 right-4 bg-primary-container/80 backdrop-blur-md border carbon-border px-3 py-1 font-label-caps text-label-caps text-tertiary rounded">
+            RESEARCH
+          </div>
+        </div>
+        <div class="p-8 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-3">Wind Harnessing Technology</h3>
+            <p class="font-body-md text-body-md text-secondary mb-6 line-clamp-3">
+              A novel concept for automotive energy recovery: replace the radiator fan with a small-scale, high-speed wind turbine. CFD-driven airfoil optimization for low-velocity, constrained-flow environments.
+            </p>
+          </div>
+          <div class="flex gap-2 flex-wrap">
+            <span class="bg-surface-container-highest px-3 py-1 font-label-caps text-label-caps text-secondary rounded">ANSYS</span>
+            <span class="bg-surface-container-highest px-3 py-1 font-label-caps text-label-caps text-secondary rounded">SolidWorks</span>
+            <span class="bg-surface-container-highest px-3 py-1 font-label-caps text-label-caps text-secondary rounded">CFD</span>
+          </div>
+        </div>
+      </a>
+
+      <div class="flex flex-col gap-gutter">
+        <!-- Topological Optimization -->
+        <a href="Project/ViewMore/TUHH.pdf" target="_blank" class="tech-card rounded-lg p-8 flex flex-col md:flex-row gap-6 items-center bg-surface-container-lowest">
+          <div class="w-full md:w-1/3 aspect-square bg-surface-container-highest rounded overflow-hidden">
+            <img alt="Topological Optimization" class="w-full h-full object-cover opacity-70" src="Project/TUHH and Airbus/NEW_Results_EX5.jpg">
+          </div>
+          <div class="w-full md:w-2/3">
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Topological Optimization</h3>
+            <p class="font-body-md text-body-md text-secondary mb-4 text-sm">
+              Mapped bionic density-field results from topological optimization onto geometrically constrained airframe structures using NURBS curves and gradients. With TUHH &amp; Airbus, Hamburg.
+            </p>
+            <div class="flex gap-2 flex-wrap">
+              <span class="text-tertiary font-label-caps text-label-caps text-[10px] border border-tertiary/30 px-2 py-1 rounded">FEA</span>
+              <span class="text-tertiary font-label-caps text-label-caps text-[10px] border border-tertiary/30 px-2 py-1 rounded">NURBS</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- VisionVest -->
+        <a href="http://www.visionvest.me" target="_blank" class="tech-card rounded-lg p-8 flex flex-col md:flex-row gap-6 items-center bg-surface-container-lowest">
+          <div class="w-full md:w-1/3 aspect-square bg-surface-container-highest rounded overflow-hidden">
+            <img alt="VisionVest" class="w-full h-full object-cover opacity-70" src="Project/VisionVest/vision_vest.jpg">
+          </div>
+          <div class="w-full md:w-2/3">
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-2">VisionVest</h3>
+            <p class="font-body-md text-body-md text-secondary mb-4 text-sm">
+              Tactile feedback vest for the visually impaired. Sensory substitution via vibration motors gives passive, direct environmental input — without requiring a stick or guide dog.
+            </p>
+            <div class="flex gap-2 flex-wrap">
+              <span class="text-tertiary font-label-caps text-label-caps text-[10px] border border-tertiary/30 px-2 py-1 rounded">Mechatronics</span>
+              <span class="text-tertiary font-label-caps text-label-caps text-[10px] border border-tertiary/30 px-2 py-1 rounded">Embedded</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= CTA ============= -->
+  <section class="mb-section-gap text-center max-w-2xl mx-auto">
+    <div class="border-b carbon-border pb-4 mb-8">
+      <h2 class="font-label-caps text-label-caps text-tertiary">03 // GET IN TOUCH</h2>
+    </div>
+    <h3 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tighter mb-6">
+      Building something interesting?
+    </h3>
+    <p class="font-body-lg text-body-lg text-secondary mb-8">
+      Available for engineering, retail/ops, and systems roles across Canada and the US. Quick intros welcome — drop a line.
+    </p>
+    <a href="contact.html" class="inline-block bg-secondary text-primary-container px-10 py-4 font-label-caps text-label-caps hover:bg-tertiary transition-colors duration-300">
+      Initialize Transmission
+    </a>
+  </section>
+
+</main>
+
+<!-- ============= FOOTER ============= -->
+<footer class="bg-surface-container-lowest w-full py-16 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/30">
+  <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-base">
+    <div class="font-label-caps text-label-caps text-secondary">
+      © <script>document.write(new Date().getFullYear());</script> MAHARSHI PATEL // ENGINEERED WITH PRECISION
+    </div>
+    <div class="flex gap-6 font-body-md text-body-md text-secondary">
+      <a class="hover:text-tertiary transition-colors" href="mailto:1patelmah@gmail.com">Email</a>
+      <a class="hover:text-tertiary transition-colors" href="https://www.linkedin.com/in/maharshipatel27/" target="_blank">LinkedIn</a>
+      <a class="hover:text-tertiary transition-colors" href="tel:+19895014467">Phone</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/stitch-nav.js"></script>
+</body>
 </html>

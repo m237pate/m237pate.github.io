@@ -1,0 +1,283 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Projects - Maharshi Patel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-secondary": "#2f3131",
+                        "on-tertiary-container": "#158787",
+                        "on-surface": "#e5e2e1",
+                        "secondary-fixed": "#e2e2e2",
+                        "tertiary-fixed": "#93f2f2",
+                        "outline-variant": "#444748",
+                        "error": "#ffb4ab",
+                        "background": "#0A0A0A",
+                        "inverse-surface": "#e5e2e1",
+                        "surface": "#0A0A0A",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-secondary-container": "#b5b5b5",
+                        "tertiary-fixed-dim": "#76d6d5",
+                        "surface-container-highest": "#353434",
+                        "tertiary-container": "#000d0d",
+                        "secondary": "#c6c6c6",
+                        "on-surface-variant": "#c4c7c7",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "inverse-on-surface": "#313030",
+                        "on-background": "#e5e2e1",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "primary-container": "#0a0a0a",
+                        "primary": "#c9c6c5",
+                        "on-tertiary-fixed": "#002020",
+                        "surface-tint": "#c9c6c5",
+                        "surface-container": "#1A1A1A",
+                        "on-tertiary-fixed-variant": "#004f4f",
+                        "surface-container-low": "#141414",
+                        "surface-bright": "#222222",
+                        "tertiary": "#76d6d5",
+                        "surface-container-high": "#2b2a2a",
+                        "surface-dim": "#0A0A0A",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#050505",
+                        "on-tertiary": "#003737",
+                        "secondary-container": "#454747",
+                        "error-container": "#93000a",
+                        "surface-variant": "#353434",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-primary-fixed-variant": "#474646",
+                        "outline": "#8e9192",
+                        "on-primary": "#313030",
+                        "inverse-primary": "#5f5e5e",
+                        "primary-fixed": "#e5e2e1",
+                        "on-primary-container": "#7b7979",
+                        "on-error-container": "#ffdad6"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "section-gap": "120px"
+                    },
+                    fontFamily: {
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "label-caps": ["JetBrains Mono"]
+                    },
+                    fontSize: {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .carbon-border {
+            border: 1px solid theme('colors.outline-variant');
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+            background: theme('colors.background');
+        }
+
+        .project-card:hover {
+            background-color: theme('colors.surface-container');
+            transform: translateY(-4px);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: theme('colors.tertiary');
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: 10;
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .glass-nav {
+            background-color: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col pt-[88px] bg-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base max-w-container-max mx-auto glass-nav border-b border-outline-variant/10">
+<a class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface" href="#">MAHARSHI PATEL</a>
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="font-label-caps text-label-caps text-secondary hover:text-on-surface transition-colors duration-300" href="#">About</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-on-surface transition-colors duration-300" href="#">Experience</a><a class="font-label-caps text-label-caps text-secondary hover:text-on-surface transition-colors duration-300" href="#">Contact</a>
+<a class="font-label-caps text-label-caps text-tertiary font-bold border-b-2 border-tertiary pb-1" href="#">Projects</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center px-4 py-2 bg-secondary text-primary-container font-label-caps text-label-caps hover:bg-on-surface transition-colors duration-200" href="#">
+            Download CV
+        </a>
+<!-- Mobile Menu Button (Simplified) -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<!-- Header Section -->
+<header class="mb-section-gap">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-gutter">Engineering<br>Portfolio</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">A comprehensive collection of technical projects spanning structural analysis, computational fluid dynamics, and innovative mechanical design.</p>
+</header>
+<!-- Filter/Category Row (Editorial Style) -->
+<div class="flex flex-wrap gap-4 mb-16 pb-4 border-b border-outline-variant/30">
+<button class="font-label-caps text-label-caps text-tertiary pb-2 border-b-2 border-tertiary">ALL PROJECTS</button>
+<button class="font-label-caps text-label-caps text-secondary hover:text-on-surface transition-colors pb-2 border-b-2 border-transparent hover:border-outline-variant">INDUSTRY</button>
+<button class="font-label-caps text-label-caps text-secondary hover:text-on-surface transition-colors pb-2 border-b-2 border-transparent hover:border-outline-variant">RESEARCH &amp; DEV</button>
+<button class="font-label-caps text-label-caps text-secondary hover:text-on-surface transition-colors pb-2 border-b-2 border-transparent hover:border-outline-variant">EDUCATIONAL</button>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Project 1: Wind Harnessing -->
+<article class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[400px]">
+<div class="mb-4 flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-tertiary px-2 py-1 bg-tertiary/10 border border-tertiary/20">RESEARCH</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+</div>
+<div class="flex-grow">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-3">Wind Harnessing Device</h2>
+<p class="font-body-md text-body-md text-secondary line-clamp-3">Optimization of blade geometry for low-velocity environments using computational fluid dynamics.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-secondary">CFD / SOLIDWORKS</span>
+<span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PROJECT</span>
+</div>
+</article>
+<!-- Project 2: Tensile Test -->
+<article class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[400px]">
+<div class="mb-4 flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">INDUSTRY</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+</div>
+<div class="flex-grow">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-3">Tensile Test Simulation</h2>
+<p class="font-body-md text-body-md text-secondary line-clamp-3">Finite Element Analysis of standard ASTM specimens under static loading conditions to verify material yield strengths.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-secondary">ANSYS FEA</span>
+<span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PROJECT</span>
+</div>
+</article>
+<!-- Project 3: Topological -->
+<article class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[400px]">
+<div class="mb-4 flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-tertiary px-2 py-1 bg-tertiary/10 border border-tertiary/20">RESEARCH</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+</div>
+<div class="flex-grow">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-3">Topological Optimization</h2>
+<p class="font-body-md text-body-md text-secondary line-clamp-3">Algorithm-driven mass reduction for aerospace brackets while maintaining structural integrity thresholds.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-secondary">OPTIMIZATION</span>
+<span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PROJECT</span>
+</div>
+</article>
+<!-- Project 4: Exhaust System -->
+<article class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[400px]">
+<div class="mb-4 flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">INDUSTRY</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+</div>
+<div class="flex-grow">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-3">Exhaust System Design</h2>
+<p class="font-body-md text-body-md text-secondary line-clamp-3">Thermal and fluid dynamic analysis of high-performance automotive exhaust manifolds.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-secondary">THERMAL / CFD</span>
+<span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PROJECT</span>
+</div>
+</article>
+<!-- Project 5: ROV -->
+<article class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[400px]">
+<div class="mb-4 flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">EDUCATIONAL</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+</div>
+<div class="flex-grow">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-3">Subsea ROV Chassis</h2>
+<p class="font-body-md text-body-md text-secondary line-clamp-3">Pressure hull and framework design for a micro-ROV operating at 100m depths.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-secondary">MARINE ENG</span>
+<span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PROJECT</span>
+</div>
+</article>
+<!-- Project 6: VisionVest -->
+<article class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[400px]">
+<div class="mb-4 flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-tertiary px-2 py-1 bg-tertiary/10 border border-tertiary/20">RESEARCH</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+</div>
+<div class="flex-grow">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-3">VisionVest Haptics</h2>
+<p class="font-body-md text-body-md text-secondary line-clamp-3">Wearable prototype integrating spatial sensors and haptic feedback for visually impaired navigation assistance.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-secondary">MECHATRONICS</span>
+<span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PROJECT</span>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="font-label-caps text-label-caps text-on-surface-variant">
+            © 2024 Maharshi Patel. Engineered with Precision.
+        </div>
+<div class="flex space-x-gutter">
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-tertiary transition-colors duration-300 ease-in-out" href="#">Email</a>
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-tertiary transition-colors duration-300 ease-in-out" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-tertiary transition-colors duration-300 ease-in-out" href="#">Phone</a>
+</div>
+</footer>
+
+
+</body></html>

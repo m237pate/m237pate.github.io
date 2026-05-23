@@ -1,234 +1,336 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Beckham - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Maharshi Patel</title>
+<meta name="description" content="A comprehensive portfolio of mechanical and systems engineering projects — research, industry, and educational design work by Maharshi Patel.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230A0A0A'/%3E%3Ctext x='8' y='12' font-family='monospace' font-size='10' fill='%2376d6d5' text-anchor='middle' font-weight='bold'%3EMP%3C/text%3E%3C/svg%3E">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="js/stitch-config.js"></script>
 
-    <link rel="stylesheet" href="css/aos.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+<link rel="stylesheet" href="css/stitch.css">
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+<!-- ============= TOP NAV ============= -->
+<nav class="glass-nav fixed top-0 w-full z-50 border-b border-outline-variant/30">
+  <div class="max-w-container-max mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base">
+    <a href="index.html" class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">MAHARSHI PATEL</a>
+    <div class="hidden md:flex gap-8 items-center font-label-caps text-label-caps">
+      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="index.html">Home</a>
+      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="about.html">Experience</a>
+      <a class="text-tertiary font-bold border-b-2 border-tertiary pb-1" href="portfolio.html">Projects</a>
+      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="contact.html">Contact</a>
+    </div>
+    <a href="resume/resume.pdf" target="_blank" class="hidden md:inline-block bg-secondary text-primary-container px-6 py-2 font-label-caps text-label-caps hover:bg-tertiary transition-colors duration-300">Download CV</a>
+    <button data-mobile-nav-toggle class="md:hidden text-primary p-2" aria-label="Open menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</nav>
 
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+<div data-mobile-drawer class="mobile-drawer">
+  <button data-mobile-nav-close class="absolute top-6 right-6 text-on-surface" aria-label="Close menu">
+    <span class="material-symbols-outlined" style="font-size:32px">close</span>
+  </button>
+  <a href="index.html">Home</a>
+  <a href="about.html">Experience</a>
+  <a href="portfolio.html">Projects</a>
+  <a href="contact.html">Contact</a>
+  <a href="resume/resume.pdf" target="_blank" class="font-label-caps text-label-caps text-tertiary border border-tertiary px-6 py-3" style="font-size:14px">DOWNLOAD CV</a>
+</div>
 
-    <div class="KW_progressContainer">
-      <div class="KW_progressBar">
+<main class="flex-grow pt-32 md:pt-48 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
 
+  <!-- ============= HEADER ============= -->
+  <header class="mb-16">
+    <span class="font-label-caps text-label-caps text-tertiary mb-4 block">// PORTFOLIO</span>
+    <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-gutter tracking-tighter">Engineering<br>Portfolio</h1>
+    <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+      A collection of technical projects spanning structural analysis, computational fluid dynamics, mechatronics, and manufacturing systems — from undergraduate research to industry deployments.
+    </p>
+  </header>
+
+  <!-- ============= FILTER BAR ============= -->
+  <div class="flex flex-wrap gap-4 mb-16 pb-4 border-b border-outline-variant/30" data-filter-bar>
+    <button data-filter="all" class="font-label-caps text-label-caps text-tertiary pb-2 border-b-2 border-tertiary">ALL PROJECTS</button>
+    <button data-filter="research" class="font-label-caps text-label-caps text-secondary hover:text-on-surface transition-colors pb-2 border-b-2 border-transparent hover:border-outline-variant">RESEARCH &amp; DEV</button>
+    <button data-filter="industry" class="font-label-caps text-label-caps text-secondary hover:text-on-surface transition-colors pb-2 border-b-2 border-transparent hover:border-outline-variant">INDUSTRY</button>
+    <button data-filter="educational" class="font-label-caps text-label-caps text-secondary hover:text-on-surface transition-colors pb-2 border-b-2 border-transparent hover:border-outline-variant">EDUCATIONAL</button>
+    <button data-filter="personal" class="font-label-caps text-label-caps text-secondary hover:text-on-surface transition-colors pb-2 border-b-2 border-transparent hover:border-outline-variant">PERSONAL</button>
+  </div>
+
+  <!-- ============= PROJECTS GRID ============= -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" data-project-grid>
+
+    <!-- 01 — Wind Harnessing -->
+    <a href="project-wind.html" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="research">
+      <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
+        <img src="Project/Waterloo Research Project/FFF.2-8-10.jpg" alt="Wind Harnessing Technology" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+      </div>
+      <div class="mb-4 flex justify-between items-start">
+        <span class="font-label-caps text-label-caps text-tertiary px-2 py-1 bg-tertiary/10 border border-tertiary/20">PRJ-001 // RESEARCH</span>
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+      </div>
+      <div class="flex-grow">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">Wind Harnessing Technology</h2>
+        <p class="font-body-md text-body-md text-secondary line-clamp-3">A novel concept for automotive energy recovery — replacing the radiator fan with a small-scale high-speed wind turbine. CFD-driven airfoil optimization.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+        <span class="font-label-caps text-label-caps text-secondary">CFD / SOLIDWORKS</span>
+        <span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">CASE STUDY</span>
+      </div>
+    </a>
+
+    <!-- 02 — Tensile Test -->
+    <a href="Project/ViewMore/ME559.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="research">
+      <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
+        <img src="Project/FEA/ME559_1.jpg" alt="Tensile Test Simulation" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+      </div>
+      <div class="mb-4 flex justify-between items-start">
+        <span class="font-label-caps text-label-caps text-tertiary px-2 py-1 bg-tertiary/10 border border-tertiary/20">PRJ-002 // RESEARCH</span>
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+      </div>
+      <div class="flex-grow">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">Tensile Test Simulation</h2>
+        <p class="font-body-md text-body-md text-secondary line-clamp-3">CAE limitations explored through FEA modeling of standard tensile specimens. Calibration and validation methodology applied to verify simulated yield response.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+        <span class="font-label-caps text-label-caps text-secondary">ANSYS / FEA</span>
+        <span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PDF</span>
+      </div>
+    </a>
+
+    <!-- 03 — Composite Tensile -->
+    <a href="Project/ViewMore/533.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="research">
+      <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
+        <img src="Project/CompositeTest/533_1.jpg" alt="Composite Tensile Test" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+      </div>
+      <div class="mb-4 flex justify-between items-start">
+        <span class="font-label-caps text-label-caps text-tertiary px-2 py-1 bg-tertiary/10 border border-tertiary/20">PRJ-003 // RESEARCH</span>
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+      </div>
+      <div class="flex-grow">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">Tensile Strength of Composite</h2>
+        <p class="font-body-md text-body-md text-secondary line-clamp-3">Empirical σ-ε curve for a household-material composite (⅛" hardwood dowel + hot-glue matrix). DoE-driven characterization of an unpredictable system.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+        <span class="font-label-caps text-label-caps text-secondary">DoE / MATERIALS</span>
+        <span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PDF</span>
+      </div>
+    </a>
+
+    <!-- 04 — Topological Optimization -->
+    <a href="Project/ViewMore/TUHH.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="research">
+      <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
+        <img src="Project/TUHH and Airbus/NEW_Results_EX5.jpg" alt="Topological Optimization" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+      </div>
+      <div class="mb-4 flex justify-between items-start">
+        <span class="font-label-caps text-label-caps text-tertiary px-2 py-1 bg-tertiary/10 border border-tertiary/20">PRJ-004 // RESEARCH</span>
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+      </div>
+      <div class="flex-grow">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">Topological Optimization</h2>
+        <p class="font-body-md text-body-md text-secondary line-clamp-3">Mapped bionic density-field results onto geometrically constrained airframe structures using NURBS curves and density gradients. With TUHH &amp; Airbus.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+        <span class="font-label-caps text-label-caps text-secondary">FEA / NURBS</span>
+        <span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PDF</span>
+      </div>
+    </a>
+
+    <!-- 05 — UWAFT Exhaust -->
+    <a href="Project/ViewMore/Exhaust.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="industry">
+      <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
+        <img src="Project/UWAFT Exhaust/Exhaust5.JPG" alt="UWAFT Exhaust System" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+      </div>
+      <div class="mb-4 flex justify-between items-start">
+        <span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">PRJ-005 // INDUSTRY</span>
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+      </div>
+      <div class="flex-grow">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">UWAFT Exhaust Design</h2>
+        <p class="font-body-md text-body-md text-secondary line-clamp-3">EcoCAR 4 (Chevrolet Blazer) exhaust system — the bottleneck subsystem from the prior competition year. Breadth and depth research into a final manufacturable design.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+        <span class="font-label-caps text-label-caps text-secondary">AUTOMOTIVE</span>
+        <span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PDF</span>
+      </div>
+    </a>
+
+    <!-- 06 — GM OPEX -->
+    <a href="Project/ViewMore/GM.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="industry">
+      <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
+        <img src="Project/GM/GM_lt4.jpg" alt="GM OPEX Improvement" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+      </div>
+      <div class="mb-4 flex justify-between items-start">
+        <span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">PRJ-006 // INDUSTRY</span>
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+      </div>
+      <div class="flex-grow">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">GM OPEX Improvement</h2>
+        <p class="font-body-md text-body-md text-secondary line-clamp-3">Led a 7-person engineering team to improve first-time quality on GenV V8 engines by 5% — focused on unload and cold-test station bottlenecks.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+        <span class="font-label-caps text-label-caps text-secondary">OPEX / QUALITY</span>
+        <span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PDF</span>
+      </div>
+    </a>
+
+    <!-- 07 — Linamar Rapid Prototyping -->
+    <a href="Project/ViewMore/Linamar.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="industry">
+      <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
+        <img src="Project/Linamar/Guage Design/18503.jpg" alt="Linamar Rapid Prototyping" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+      </div>
+      <div class="mb-4 flex justify-between items-start">
+        <span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">PRJ-007 // INDUSTRY</span>
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+      </div>
+      <div class="flex-grow">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">Linamar Rapid Prototyping</h2>
+        <p class="font-body-md text-body-md text-secondary line-clamp-3">Prototyped Ford &amp; GM transmission parts and designed bore, depth, thread, and Go/NoGo gauges during the facility's low- to high-volume transition.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+        <span class="font-label-caps text-label-caps text-secondary">METROLOGY</span>
+        <span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PDF</span>
+      </div>
+    </a>
+
+    <!-- 08 — Underwater ROV -->
+    <a href="Project/ViewMore/ROV.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="educational">
+      <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
+        <img src="Project/ROV/front.jpg" alt="Underwater ROV" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+      </div>
+      <div class="mb-4 flex justify-between items-start">
+        <span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">PRJ-008 // EDUCATIONAL</span>
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+      </div>
+      <div class="flex-grow">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">Underwater ROV</h2>
+        <p class="font-body-md text-body-md text-secondary line-clamp-3">Hydrodynamic ROV chassis modeled after a water droplet — one of nature's most efficient shapes for fluid traversal.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+        <span class="font-label-caps text-label-caps text-secondary">MARINE ENG</span>
+        <span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PDF</span>
+      </div>
+    </a>
+
+    <!-- 09 — VisionVest -->
+    <a href="http://www.visionvest.me" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="educational">
+      <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
+        <img src="Project/VisionVest/vision_vest.jpg" alt="VisionVest" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+      </div>
+      <div class="mb-4 flex justify-between items-start">
+        <span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">PRJ-009 // EDUCATIONAL</span>
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+      </div>
+      <div class="flex-grow">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">VisionVest</h2>
+        <p class="font-body-md text-body-md text-secondary line-clamp-3">Tactile feedback vest for the visually impaired. Vibration motors deliver passive, direct environmental input — no stick or guide dog required.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+        <span class="font-label-caps text-label-caps text-secondary">MECHATRONICS</span>
+        <span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VISIONVEST.ME ↗</span>
+      </div>
+    </a>
+
+    <!-- 10 — Balsawood Bridge -->
+    <a href="Project/ViewMore/Bridge.pdf" target="_blank" class="project-card carbon-border p-6 relative flex flex-col group cursor-pointer h-full min-h-[420px] overflow-hidden" data-category="educational">
+      <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
+        <img src="Project/BridgeProject/Bridge_Final_3D_Model.jpg" alt="Balsawood Bridge" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+      </div>
+      <div class="mb-4 flex justify-between items-start">
+        <span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">PRJ-010 // EDUCATIONAL</span>
+        <span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+      </div>
+      <div class="flex-grow">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">Balsawood Bridge</h2>
+        <p class="font-body-md text-body-md text-secondary line-clamp-3">Balsa bridge optimized for weight-to-strength ratio. ANSYS AIM stress analysis calibrated and validated against physical load-to-failure testing.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+        <span class="font-label-caps text-label-caps text-secondary">STRUCTURAL FEA</span>
+        <span class="font-label-caps text-label-caps text-primary group-hover:text-tertiary transition-colors">VIEW PDF</span>
+      </div>
+    </a>
+
+    <!-- 11 — Racing Simulator -->
+    <div class="project-card carbon-border p-6 relative flex flex-col group h-full min-h-[420px] overflow-hidden" data-category="personal">
+      <div class="aspect-video bg-surface-container-highest -mx-6 -mt-6 mb-6 overflow-hidden">
+        <img src="Project/Car Stand/IMG_4071.jpg" alt="Racing Simulator" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+      </div>
+      <div class="mb-4 flex justify-between items-start">
+        <span class="font-label-caps text-label-caps text-on-surface px-2 py-1 bg-surface-variant border border-outline-variant">PRJ-011 // PERSONAL</span>
+        <span class="material-symbols-outlined text-outline-variant">hourglass_top</span>
+      </div>
+      <div class="flex-grow">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-3">Racing Simulator</h2>
+        <p class="font-body-md text-body-md text-secondary line-clamp-3">Ergonomic, cost-optimized DIY rig for Logitech G920 — designed because off-market solutions were either too expensive or didn't fit a home setup.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+        <span class="font-label-caps text-label-caps text-secondary">GAMING / HW</span>
+        <span class="font-label-caps text-label-caps text-on-surface-variant">COMING SOON</span>
       </div>
     </div>
-    <div class="page">
-    <nav id="colorlib-main-nav" role="navigation">
-      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-      <div class="js-fullheight colorlib-table">
-      	<div class="img" style="background-image: url(images/author-2.jpg);"></div>
-        <div class="colorlib-table-cell js-fullheight">
-          <div class="row no-gutters">
-            <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Beckham Muff</a></h1>
-              <ul>
-                <li><a href="index.html"><span><small>01</small>Home</span></a></li>
-                <li><a href="about.html"><span><small>02</small>Resume</span></a></li>
-                <li><a href="services.html"><span><small>03</small>Services</span></a></li>
-                <li class="active"><a href="portfolio.html"><span><small>04</small>Portfolio</span></a></li>
-                <li><a href="blog.html"><span><small>05</small>Blog</span></a></li>
-                <li><a href="contact.html"><span><small>06</small>Contact</span></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    
-    <div id="colorlib-page">
-      <header>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="colorlib-navbar-brand">
-                <a class="colorlib-logo" href="index.html"><span class="logo-img" style="background-image: url(images/person_1.jpg);"></span>Beckham Muff</a>
-              </div>
-              <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-            </div>
-          </div>
-        </div>
-      </header>
 
-      <section class="ftco-section">
-        <div class="container mt-5">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <span>Portfolio</span>
-              <h2>Checkout a few of my works</h2>
-            </div>
-          </div>
-          <div class="row no-gutters">
-	          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-	            <a href="portfolio-single.html" class="image d-flex justify-content-center align-items-center" style="background-image: url('images/work-1.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-	              <div class="icon d-flex text-center justify-content-center align-items-center">
-	                <span class="icon-search"></span>
-	              </div>
-	            </a>
-	            <div class="text">
-	              <h4 class="subheading">Illustration</h4>
-	              <h2 class="heading"><a href="portfolio-single.html">Even the all-powerful Pointing has no control</a></h2>
-	              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-	              <p><a href="#">View Project</a></p>
-	            </div>
-	          </div>
-	          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-	            <a href="portfolio-single.html" class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('images/work-2.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-	              <div class="icon d-flex text-center justify-content-center align-items-center">
-	                <span class="icon-search"></span>
-	              </div>
-	            </a>
-	            <div class="text order-1">
-	              <h4 class="subheading">Application</h4>
-	              <h2 class="heading"><a href="portfoli-singleo.html">Even the all-powerful Pointing has no control</a></h2>
-	              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-	              <p><a href="#">View Project</a></p>
-	            </div>
-	          </div>
-	          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-	            <a href="portfolio-single.html" class="image d-flex justify-content-center align-items-center" style="background-image: url('images/work-3.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-	              <div class="icon d-flex text-center justify-content-center align-items-center">
-	                <span class="icon-search"></span>
-	              </div>
-	            </a>
-	            <div class="text">
-	              <h4 class="subheading">Web Design</h4>
-	              <h2 class="heading"><a href="portfolio-single.html">Even the all-powerful Pointing has no control</a></h2>
-	              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-	              <p><a href="#">View Project</a></p>
-	            </div>
-	          </div>
-	          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-	            <a href="portfolio-single.html" class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('images/work-4.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-	              <div class="icon d-flex text-center justify-content-center align-items-center">
-	                <span class="icon-search"></span>
-	              </div>
-	            </a>
-	            <div class="text order-1">
-	              <h4 class="subheading">Application</h4>
-	              <h2 class="heading"><a href="portfoli-singleo.html">Even the all-powerful Pointing has no control</a></h2>
-	              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-	              <p><a href="#">View Project</a></p>
-	            </div>
-	          </div>
-	          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-	            <a href="portfolio-single.html" class="image d-flex justify-content-center align-items-center" style="background-image: url('images/work-5.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-	              <div class="icon d-flex text-center justify-content-center align-items-center">
-	                <span class="icon-search"></span>
-	              </div>
-	            </a>
-	            <div class="text">
-	              <h4 class="subheading">Animation</h4>
-	              <h2 class="heading"><a href="portfoli-singleo.html">Even the all-powerful Pointing has no control</a></h2>
-	              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-	              <p><a href="#">View Project</a></p>
-	            </div>
-	          </div>
-	          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-	            <a href="portfolio-single.html" class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('images/work-6.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-	              <div class="icon d-flex text-center justify-content-center align-items-center">
-	                <span class="icon-search"></span>
-	              </div>
-	            </a>
-	            <div class="text order-1">
-	              <h4 class="subheading">Branding</h4>
-	              <h2 class="heading"><a href="portfoli-singleo.html">Even the all-powerful Pointing has no control</a></h2>
-	              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-	              <p><a href="#">View Project</a></p>
-	            </div>
-	          </div>
-	        </div>
-	        <div class="row mt-5">
-	          <div class="col text-center">
-	            <div class="block-27">
-	              <ul>
-	                <li><a href="#">&lt;</a></li>
-	                <li class="active"><span>1</span></li>
-	                <li><a href="#">2</a></li>
-	                <li><a href="#">3</a></li>
-	                <li><a href="#">4</a></li>
-	                <li><a href="#">5</a></li>
-	                <li><a href="#">&gt;</a></li>
-	              </ul>
-	            </div>
-	          </div>
-	        </div>
-        </div>
-      </section>
-      
-      <footer class="ftco-footer ftco-bg-dark ftco-section">
-        <div class="container">
-          <div class="row mb-5 justify-content-center">
-            <div class="col-md-5 text-center">
-              <div class="ftco-footer-widget mb-5">
-                <ul class="ftco-footer-social list-unstyled">
-                  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
-              </div>
-              <div class="ftco-footer-widget">
-                <h2 class="mb-3">Contact Us</h2>
-                <p class="h3 email"><a href="#">info@email.com</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-center">
+  </div>
 
-              <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true" style="color: red;"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-            </div>
-          </div>
-        </div>
-      </footer>
+  <p data-empty class="hidden text-center font-body-md text-on-surface-variant py-section-gap">No projects in this category.</p>
 
-      <!-- loader -->
-      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+</main>
 
-      </div>
-
+<!-- ============= FOOTER ============= -->
+<footer class="bg-surface-container-lowest w-full py-16 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/30">
+  <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-base">
+    <div class="font-label-caps text-label-caps text-secondary">
+      © <script>document.write(new Date().getFullYear());</script> MAHARSHI PATEL // ENGINEERED WITH PRECISION
     </div>
+    <div class="flex gap-6 font-body-md text-body-md text-secondary">
+      <a class="hover:text-tertiary transition-colors" href="mailto:1patelmah@gmail.com">Email</a>
+      <a class="hover:text-tertiary transition-colors" href="https://www.linkedin.com/in/maharshipatel27/" target="_blank">LinkedIn</a>
+      <a class="hover:text-tertiary transition-colors" href="tel:+19895014467">Phone</a>
+    </div>
+  </div>
+</footer>
 
+<script src="js/stitch-nav.js"></script>
+<script>
+  // Portfolio category filter
+  (function () {
+    var bar = document.querySelector('[data-filter-bar]');
+    var grid = document.querySelector('[data-project-grid]');
+    var empty = document.querySelector('[data-empty]');
+    if (!bar || !grid) return;
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
+    bar.addEventListener('click', function (e) {
+      var btn = e.target.closest('button[data-filter]');
+      if (!btn) return;
+      var filter = btn.dataset.filter;
+
+      // Toggle active styles
+      bar.querySelectorAll('button').forEach(function (b) {
+        b.classList.remove('text-tertiary', 'border-tertiary');
+        b.classList.add('text-secondary', 'border-transparent');
+      });
+      btn.classList.remove('text-secondary', 'border-transparent');
+      btn.classList.add('text-tertiary', 'border-tertiary');
+
+      // Filter cards
+      var any = false;
+      grid.querySelectorAll('[data-category]').forEach(function (card) {
+        var show = filter === 'all' || card.dataset.category === filter;
+        card.style.display = show ? '' : 'none';
+        if (show) any = true;
+      });
+      empty.classList.toggle('hidden', any);
+    });
+  })();
+</script>
+</body>
 </html>

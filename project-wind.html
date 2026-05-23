@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wind Harnessing Technology | Maharshi Patel</title>
+<meta name="description" content="A novel concept for automotive energy recovery: replacing the radiator fan with a small-scale, high-speed wind turbine. CFD-driven airfoil optimization, with University of Waterloo.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230A0A0A'/%3E%3Ctext x='8' y='12' font-family='monospace' font-size='10' fill='%2376d6d5' text-anchor='middle' font-weight='bold'%3EMP%3C/text%3E%3C/svg%3E">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="js/stitch-config.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/stitch.css">
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col">
+
+<!-- ============= TOP NAV ============= -->
+<nav class="glass-nav fixed top-0 w-full z-50 border-b border-outline-variant/30">
+  <div class="max-w-container-max mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base">
+    <a href="index.html" class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">MAHARSHI PATEL</a>
+    <div class="hidden md:flex gap-8 items-center font-label-caps text-label-caps">
+      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="index.html">Home</a>
+      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="about.html">Experience</a>
+      <a class="text-tertiary font-bold border-b-2 border-tertiary pb-1" href="portfolio.html">Projects</a>
+      <a class="text-secondary hover:text-tertiary transition-colors duration-300" href="contact.html">Contact</a>
+    </div>
+    <a href="resume/resume.pdf" target="_blank" class="hidden md:inline-block bg-secondary text-primary-container px-6 py-2 font-label-caps text-label-caps hover:bg-tertiary transition-colors duration-300">Download CV</a>
+    <button data-mobile-nav-toggle class="md:hidden text-primary p-2" aria-label="Open menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</nav>
+
+<div data-mobile-drawer class="mobile-drawer">
+  <button data-mobile-nav-close class="absolute top-6 right-6 text-on-surface" aria-label="Close menu">
+    <span class="material-symbols-outlined" style="font-size:32px">close</span>
+  </button>
+  <a href="index.html">Home</a>
+  <a href="about.html">Experience</a>
+  <a href="portfolio.html">Projects</a>
+  <a href="contact.html">Contact</a>
+  <a href="resume/resume.pdf" target="_blank" class="font-label-caps text-label-caps text-tertiary border border-tertiary px-6 py-3" style="font-size:14px">DOWNLOAD CV</a>
+</div>
+
+<main class="flex-grow pt-32 md:pt-48 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+
+  <!-- Back link -->
+  <a href="portfolio.html" class="inline-flex items-center gap-2 font-label-caps text-label-caps text-secondary hover:text-tertiary transition-colors mb-12">
+    <span class="material-symbols-outlined" style="font-size:18px">arrow_back</span>
+    BACK TO PORTFOLIO
+  </a>
+
+  <!-- ============= HERO ============= -->
+  <section class="mb-section-gap">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+      <div class="md:col-span-10 md:col-start-2 text-center">
+        <span class="font-label-caps text-label-caps text-tertiary mb-4 block">PRJ-001 // RESEARCH &amp; DEVELOPMENT</span>
+        <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-6 tracking-tighter">
+          Wind Harnessing Technology
+        </h1>
+        <p class="font-body-lg text-body-lg text-secondary max-w-3xl mx-auto">
+          A novel concept for automotive energy recovery — replacing the radiator fan with a small-scale, high-speed wind turbine. CFD-driven airfoil optimization for low-velocity, constrained-flow environments.
+        </p>
+        <p class="font-label-caps text-label-caps text-on-surface-variant mt-6">UNIVERSITY OF WATERLOO · MECHANICAL RESEARCH</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= HERO IMAGE ============= -->
+  <section class="mb-section-gap">
+    <div class="carbon-border aspect-[16/7] overflow-hidden bg-surface-container-highest">
+      <img alt="Wind harnessing turbine CFD analysis" src="Project/Waterloo Research Project/FFF.2-8-10.jpg" class="w-full h-full object-cover">
+    </div>
+  </section>
+
+  <!-- ============= TECH SPECS ============= -->
+  <section class="mb-section-gap">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+      <div class="carbon-panel p-6 flex flex-col items-start gap-4">
+        <span class="material-symbols-outlined text-tertiary" style="font-size:32px">speed</span>
+        <h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase">Analysis</h3>
+        <p class="font-headline-md text-headline-md">ANSYS CFD</p>
+      </div>
+      <div class="carbon-panel p-6 flex flex-col items-start gap-4">
+        <span class="material-symbols-outlined text-tertiary" style="font-size:32px">design_services</span>
+        <h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase">Design</h3>
+        <p class="font-headline-md text-headline-md">SolidWorks CAD</p>
+      </div>
+      <div class="carbon-panel p-6 flex flex-col items-start gap-4">
+        <span class="material-symbols-outlined text-tertiary" style="font-size:32px">science</span>
+        <h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase">Domain</h3>
+        <p class="font-headline-md text-headline-md">Aerodynamics</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= OVERVIEW + HIGHLIGHTS ============= -->
+  <section class="mb-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter">
+    <div class="md:col-span-7 md:col-start-1">
+      <span class="font-label-caps text-label-caps text-tertiary mb-4 block">// PROJECT OVERVIEW</span>
+      <h2 class="font-headline-lg text-headline-lg mb-6">Recovering parasitic airflow.</h2>
+      <div class="font-body-md text-body-md text-on-surface-variant space-y-4">
+        <p>The objective: rethink energy recovery in high-airflow, constrained environments. The radiator fan in a typical automotive cooling system pushes a continuous, turbulent volume of air — most of which dissipates as heat without recovering useful work.</p>
+        <p>By replacing the conventional fan with a small-scale, high-speed wind turbine sized for the cooling pack, parasitic losses can be captured as electrical output. The challenge: precisely tune blade profiles to operate efficiently inside a turbulent wake region without impeding the cooling airflow the engine still needs.</p>
+        <p>The work involved iterative blade-geometry studies in SolidWorks, paired with ANSYS CFD characterization of pressure, velocity, and angle-of-attack across the operating envelope.</p>
+      </div>
+      <div class="mt-8">
+        <a href="Project/ViewMore/FINAL_Airfoil.pdf" target="_blank" class="inline-flex items-center gap-3 bg-secondary text-primary-container px-6 py-3 font-label-caps text-label-caps hover:bg-tertiary transition-colors">
+          <span class="material-symbols-outlined" style="font-size:18px">picture_as_pdf</span>
+          DOWNLOAD FULL PAPER
+        </a>
+      </div>
+    </div>
+    <div class="md:col-span-5 mt-12 md:mt-0">
+      <div class="carbon-panel p-8 h-full flex flex-col justify-center">
+        <h3 class="font-label-caps text-label-caps text-tertiary uppercase mb-8">Key Highlights</h3>
+        <div class="space-y-8">
+          <div>
+            <div class="flex items-start gap-4 mb-2">
+              <span class="material-symbols-outlined text-tertiary mt-1">bolt</span>
+              <p class="font-headline-md text-headline-md">Energy recovery from cooling-pack airflow</p>
+            </div>
+          </div>
+          <div class="w-full h-[1px] bg-outline-variant/30"></div>
+          <div>
+            <div class="flex items-start gap-4 mb-2">
+              <span class="material-symbols-outlined text-tertiary mt-1">tune</span>
+              <p class="font-headline-md text-headline-md">Iterative CFD-driven blade tuning</p>
+            </div>
+          </div>
+          <div class="w-full h-[1px] bg-outline-variant/30"></div>
+          <div>
+            <div class="flex items-start gap-4 mb-2">
+              <span class="material-symbols-outlined text-tertiary mt-1">verified</span>
+              <p class="font-headline-md text-headline-md">Calibrated against turbulent wake conditions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= GALLERY ============= -->
+  <section class="mb-section-gap">
+    <h2 class="font-headline-lg text-headline-lg mb-12 text-center">Technical Documentation</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+      <div class="carbon-border aspect-video relative overflow-hidden group">
+        <img src="Project/Waterloo Research Project/FFF.1-8-002201.jpg" alt="CFD pressure field" class="object-cover w-full h-full opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+        <div class="absolute bottom-4 left-4 font-label-caps text-label-caps bg-surface px-3 py-1 border carbon-border">FIG 1. CFD PRESSURE FIELD</div>
+      </div>
+      <div class="carbon-border aspect-video relative overflow-hidden group">
+        <img src="Project/Waterloo Research Project/Velocity_84.jpg" alt="CFD velocity vectors" class="object-cover w-full h-full opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+        <div class="absolute bottom-4 left-4 font-label-caps text-label-caps bg-surface px-3 py-1 border carbon-border">FIG 2. VELOCITY VECTORS</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= NEXT/PREV ============= -->
+  <section class="mt-24 border-t border-outline-variant/30 pt-12 flex justify-between items-center gap-4 flex-wrap">
+    <a href="Project/ViewMore/TUHH.pdf" target="_blank" class="group flex items-center gap-4 hover:text-tertiary transition-colors duration-300">
+      <span class="material-symbols-outlined text-3xl group-hover:-translate-x-2 transition-transform duration-300">arrow_back</span>
+      <div>
+        <span class="font-label-caps text-label-caps text-secondary block mb-1">PREVIOUS PROJECT</span>
+        <span class="font-headline-md text-headline-md">Topological Optimization</span>
+      </div>
+    </a>
+    <a href="Project/ViewMore/ME559.pdf" target="_blank" class="group flex items-center gap-4 text-right hover:text-tertiary transition-colors duration-300">
+      <div>
+        <span class="font-label-caps text-label-caps text-secondary block mb-1">NEXT PROJECT</span>
+        <span class="font-headline-md text-headline-md">Tensile Test Simulation</span>
+      </div>
+      <span class="material-symbols-outlined text-3xl group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
+    </a>
+  </section>
+
+</main>
+
+<!-- ============= FOOTER ============= -->
+<footer class="bg-surface-container-lowest w-full py-16 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/30">
+  <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-base">
+    <div class="font-label-caps text-label-caps text-secondary">
+      © <script>document.write(new Date().getFullYear());</script> MAHARSHI PATEL // ENGINEERED WITH PRECISION
+    </div>
+    <div class="flex gap-6 font-body-md text-body-md text-secondary">
+      <a class="hover:text-tertiary transition-colors" href="mailto:1patelmah@gmail.com">Email</a>
+      <a class="hover:text-tertiary transition-colors" href="https://www.linkedin.com/in/maharshipatel27/" target="_blank">LinkedIn</a>
+      <a class="hover:text-tertiary transition-colors" href="tel:+19895014467">Phone</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/stitch-nav.js"></script>
+</body>
+</html>

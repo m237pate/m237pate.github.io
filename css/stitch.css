@@ -1,0 +1,213 @@
+/* ===========================================================
+   Stitch design system — site-wide custom styles
+   Pairs with css/Tailwind CDN + js/stitch-config.js
+   =========================================================== */
+
+html { scroll-behavior: smooth; }
+body { background-color: #0A0A0A; color: #e5e2e1; }
+
+/* Material icons baseline */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Thin "machined" borders used across cards/panels */
+.carbon-border {
+  border: 1px solid rgba(224, 224, 224, 0.1);
+}
+
+/* Solid raised panel — used on detail pages */
+.carbon-panel {
+  background-color: #1A1A1A;
+  border: 1px solid rgba(224, 224, 224, 0.1);
+  transition: border-color 0.3s ease;
+}
+.carbon-panel:hover {
+  border-top: 4px solid #76d6d5;
+}
+
+/* Frosted-glass top nav */
+.glass-nav {
+  background-color: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Glass overlay panel for inline content */
+.glass-panel {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Skill / category card — home page Technical Arsenal */
+.tech-card {
+  background: transparent;
+  border: 1px solid rgba(224, 224, 224, 0.1);
+  transition: all 0.3s ease;
+}
+.tech-card:hover {
+  background: #111111;
+  border-top: 4px solid #76d6d5;
+  box-shadow: 0 0 15px rgba(118, 214, 213, 0.15);
+}
+
+/* Project card — portfolio grid */
+.project-card {
+  transition: all 0.3s ease;
+  background: #0A0A0A;
+  position: relative;
+}
+.project-card:hover {
+  background-color: #141414;
+  transform: translateY(-4px);
+}
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #76d6d5;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Experience timeline (about page) */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background-color: rgba(224, 224, 224, 0.1);
+  z-index: 0;
+}
+.timeline-node {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #0A0A0A;
+  border: 2px solid #76d6d5;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(118, 214, 213, 0.3);
+  transition: all 0.3s ease;
+}
+.experience-card {
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(20, 20, 20, 0.4);
+}
+.experience-card:hover {
+  background-color: #111111;
+  transform: translateY(-2px);
+}
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #76d6d5;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.experience-card:hover::before {
+  transform: scaleX(1);
+}
+.experience-card:hover .timeline-node {
+  background-color: #76d6d5;
+  box-shadow: 0 0 15px rgba(118, 214, 213, 0.6);
+}
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+    transform: none;
+  }
+  .timeline-node {
+    left: 20px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Form field underline animation (contact) */
+.field-wrap label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: #8e9192;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+.field-wrap:focus-within label,
+.field-wrap.has-value label {
+  top: -10px;
+  font-size: 10px;
+  color: #76d6d5;
+}
+.field-wrap input,
+.field-wrap textarea {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #444748;
+  padding: 16px 0;
+  width: 100%;
+  color: #e5e2e1;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.field-wrap input:focus,
+.field-wrap textarea:focus {
+  border-bottom-color: #76d6d5;
+}
+
+/* Mobile nav drawer */
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 10, 10, 0.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: 60;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.mobile-drawer.open { display: flex; }
+.mobile-drawer a {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #e5e2e1;
+}
+.mobile-drawer a:hover { color: #76d6d5; }
+
+/* Subtle scrollbar styling */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #353434; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #76d6d5; }
+
+/* Text selection */
+::selection { background-color: rgba(118, 214, 213, 0.3); color: #76d6d5; }
