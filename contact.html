@@ -8,7 +8,7 @@ redirect_from: /contact.html
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Maharshi Patel</title>
-<meta name="description" content="Get in touch with Maharshi Patel — systems engineer & operations builder based in Canada, available across the US.">
+<meta name="description" content="Get in touch with Maharshi Patel. Systems engineer & operations builder based in Canada, available across the US.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230A0A0A'/%3E%3Ctext x='8' y='12' font-family='monospace' font-size='10' fill='%2376d6d5' text-anchor='middle' font-weight='bold'%3EMP%3C/text%3E%3C/svg%3E">
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -61,7 +61,7 @@ redirect_from: /contact.html
         Let's engineer<br>something great.
       </h1>
       <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-        Available for systems, operations, and engineering roles across Canada and the USA — or to talk shop about your business. Quick intros welcome.
+        Available for systems, operations, and engineering roles across Canada and the USA, or to talk shop about your business. Quick intros welcome.
       </p>
     </div>
   </section>
@@ -99,7 +99,7 @@ redirect_from: /contact.html
         <div class="absolute top-0 left-0 w-full h-[2px] bg-transparent group-hover:bg-tertiary transition-colors duration-300"></div>
         <div class="font-label-caps text-label-caps text-tertiary mb-2 uppercase">Current Coordinates</div>
         <div class="font-headline-md text-headline-md text-on-surface">Canada</div>
-        <div class="font-body-md text-body-md text-on-surface-variant mt-1">Available for relocation — US / CAN</div>
+        <div class="font-body-md text-body-md text-on-surface-variant mt-1">Available for relocation across US and Canada</div>
       </div>
 
       <a href="https://www.linkedin.com/in/maharshipatel27/" target="_blank" class="block border border-outline-variant/50 p-6 relative group hover:bg-surface-container-highest transition-colors duration-300">
@@ -122,7 +122,7 @@ redirect_from: /contact.html
           email never appears verbatim in static HTML source.
 
           This is a regular (non-AJAX) POST endpoint. FormSubmit's _autoresponse and
-          reCAPTCHA only fire on regular POST submissions — AJAX silently skips both.
+          reCAPTCHA only fire on regular POST submissions. AJAX silently skips both.
 
           To upgrade to a fully-anonymized hashed token (recommended later):
             1. Visit  https://formsubmit.co  →  enter the recipient email
@@ -144,7 +144,7 @@ redirect_from: /contact.html
         <!-- Redirect visitor to our own thank-you page after FormSubmit accepts the message -->
         <input type="hidden" name="_next" value="https://maharshipatel.me/thank-you/">
         <!-- Auto-reply emailed back to the visitor when reCAPTCHA passes -->
-        <input type="hidden" name="_autoresponse" value="Thanks for reaching out via my portfolio — your transmission has landed. I'll get back to you within a couple of days. In the meantime, feel free to connect on LinkedIn: https://www.linkedin.com/in/maharshipatel27/ — Maharshi">
+        <input type="hidden" name="_autoresponse" value="Thanks for reaching out via my portfolio. Your transmission has landed. I'll get back to you within a couple of days. In the meantime, feel free to connect on LinkedIn: https://www.linkedin.com/in/maharshipatel27/. Maharshi">
         <!-- Lightweight spam-phrase filter; FormSubmit drops submissions containing any of these -->
         <input type="hidden" name="_blacklist" value="casino, viagra, lottery, crypto investment, bitcoin opportunity, seo services, link building">
         <!-- Honeypot: humans never see this; bots fill it; FormSubmit drops the submission -->
@@ -195,7 +195,7 @@ redirect_from: /contact.html
 <script>
   // Reveal-on-click for phone & email. Sensitive data is split across
   // data attributes (data-p1/p2/p3 for phone, data-em-local/data-em-domain
-  // for email) and assembled in JS only after a click — so the raw values
+  // for email) and assembled in JS only after a click, so the raw values
   // never appear in the static HTML for naive scrapers to harvest.
   (function () {
     var phonePanel = document.querySelector('[data-phone-panel]');
@@ -236,7 +236,7 @@ redirect_from: /contact.html
   //     via the _next field.
   //
   // Why not AJAX? FormSubmit's docs note that _autoresponse and reCAPTCHA are skipped
-  // on AJAX submissions — so a regular POST is the only way to get the auto-reply.
+  // on AJAX submissions, so a regular POST is the only way to get the auto-reply.
   (function () {
     var form = document.querySelector('[data-contact-form]');
     if (!form) return;
@@ -250,7 +250,7 @@ redirect_from: /contact.html
     var btnLabel = form.querySelector('[data-submit-label]');
 
     form.addEventListener('submit', function (e) {
-      // Honeypot — bail silently and don't navigate if a bot filled it
+      // Honeypot: bail silently and don't navigate if a bot filled it
       if (form.querySelector('[name="_honey"]').value) {
         e.preventDefault();
         return;
@@ -267,7 +267,7 @@ redirect_from: /contact.html
       status.textContent = '→ Sending… (you may see a reCAPTCHA challenge before landing on the confirmation page)';
       status.classList.remove('hidden', 'text-error');
       status.classList.add('text-tertiary');
-      // The form submits naturally — no preventDefault on the happy path.
+      // The form submits naturally. No preventDefault on the happy path.
     });
   })();
 </script>
